@@ -8,6 +8,8 @@ ol.courses-list
 			p.courses-list-item__description = type.description
 			p.courses-list-item__link = link_to "Начать", course_type_url([@course_type.name, type.slugs.last])
 
+
+
 /td = link_to 'Show', course
 /td = link_to 'Edit', edit_course_path(course)
 /td = link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete
