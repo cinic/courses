@@ -1,0 +1,10 @@
+h1 Admin
+
+p Текущий пользователь: #{current_user.role}
+
+p = link_to 'Пользователи', admin_users_path
+p = link_to 'Создать пользователя', new_admin_user_path
+
+
+p = link_to 'Курсы', admin_courses_path
+p = link_to 'Создать курс', new_admin_course_path

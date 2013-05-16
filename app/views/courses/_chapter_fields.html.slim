@@ -1,0 +1,13 @@
+p
+	= f.label :content, "Chapter"
+	= f.link_to_remove "Remove Chapter"
+	br/
+	= f.label :title, "Chapter title"
+	= f.text_field :title
+	br/
+	= f.text_area :content, :rows => 5, :cols => 55
+	br/
+	= f.fields_for :questions do |builder|
+		= render 'question_fields', :f => builder
+	= f.link_to_add "Add a question", :questions
+	br/

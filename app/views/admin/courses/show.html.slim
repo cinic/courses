@@ -1,0 +1,22 @@
+title "Course"
+p#notice = notice
+
+p
+  b Title: 
+  = @course.title
+p
+	b Type: 
+	= CourseType.find(@course.course_type_id).description
+ol 
+	- for chapter in @course.chapters
+		li 
+			h2 = chapter.title
+			= chapter.content.html_safe
+			ul
+				- for question in chapter.questions
+					li
+						= question.content
+						ul
+							- for answer in question.answers
+								li = answer.content
+p #{link_to "Edit", edit_admin_course_path(@course)} | #{link_to "Destroy", [:admin,@course], :confirm => 'Are you sure?', :method => :delete} | #{link_to "View All", admin_courses_path}

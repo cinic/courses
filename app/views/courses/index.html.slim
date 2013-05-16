@@ -1,0 +1,10 @@
+- content_for :title, "Наши курсы"
+h1 Программы обучения
+
+ul
+
+  - @course_types.each do |type|
+    li = link_to type.description, course_type_url(type.name)
+      /td = link_to 'Show', course
+      /td = link_to 'Edit', edit_course_path(course)
+      /td = link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete

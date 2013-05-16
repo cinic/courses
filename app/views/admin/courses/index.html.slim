@@ -1,0 +1,16 @@
+h1 Listing courses
+
+table
+	tr
+		th Курс
+		th
+	- @courses.each do |course|
+		tr
+			td = course.title
+			td = link_to 'Edit', edit_admin_course_path(course)
+	    	/td = link_to 'Show', course
+	    	/td = link_to 'Edit', edit_course_path(course)
+	    	/td = link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete
+
+
+p = link_to 'New Course', new_admin_course_path

@@ -1,0 +1,21 @@
+= nested_form_for @course do |f|
+	- if @course.errors.any?
+		#error_explanation
+			h2 = "#{pluralize(@course.errors.count, "error")} prohibited this course from being saved:"
+			ul
+				- @course.errors.full_messages.each do |message|
+					li = message
+	= f.fields_for :course_type do |builder|
+    	= render "course_type_fields", :f => builder
+	.field
+		= f.label :title
+		= f.text_field :title
+	.field
+		= f.label :description
+		= f.text_area :description
+
+	= f.fields_for :chapters do |builder|
+    	= render "chapter_fields", :f => builder
+    = f.link_to_add "Add a chapter", :chapters
+
+	.actions = f.submit 'Save'

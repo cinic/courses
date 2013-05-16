@@ -1,0 +1,28 @@
+- content_for :title, @course.title
+- if notice
+	p.notice#notice = notice
+
+h1.course-title = @course.title
+article.course.group
+	.course__navigation.group
+		/h3.course__navigation-title Оглавление
+		ul.course-navigation__layout
+			- @course.chapters.each_with_index do |chapter, index|
+				li.course-navigation__layout-item
+					= link_to chapter.title, course_type_url([@course_type.name, @course.slugs.last, index.to_s]), {"data-chapter_id" => "#{chapter.id}", "class" => "course-navigation__item"}
+	section.course__content
+		= @chapter_content.content.html_safe
+/					a.chapters-navigation__item data-chapter_id="#{chapter.id}"
+/						h4.course-chapter__title = chapter.title
+/			div.course-chapter__content
+/				= chapter.content.html_safe
+/			ul
+/				- for question in chapter.questions
+/					li
+/						= question.content
+/						ul
+/							- for answer in question.answers
+/								li = answer.content
+/p #{link_to "Edit", edit_course_path(@course)} | #{link_to "Destroy", @course, :confirm => 'Are you sure?', :method => :delete} | #{link_to "View All", courses_path}
+p = link_to "К списку курсов", course_type_url(@course_type.name)
+/= request.fullpath
