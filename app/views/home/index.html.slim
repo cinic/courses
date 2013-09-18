@@ -4,140 +4,142 @@ a.closed id="toggle"
 /! Navigation
 header.navbar.navbar-fixed-top
 	div.inner-page
-		h1.logo The Story
+		h1.logo i–Polza
 		div id="nav"
 			ul.nav
 				li.active
-					a.scroll.brand-1 title="Home page" href="#home" Home
+					a.scroll.brand-1 title="Home page" href="#home"
+						i.icon-home
 				li
-					a.scroll.brand-4 title="Check out our awesome services" href="#features" Features
+					a.scroll.brand-4 title="Check out our awesome services" href="#features" Как это работает
 				li
-					a.scroll.brand-3 title="Themes assets" href="#assets" Assets
+					a.scroll.brand-3 title="Themes assets" href="#assets" Зачем
 				li
-					a.scroll.fadeto.brand-4 title="Who we are" href="#about" About us
+					a.scroll.fadeto.brand-4 title="Who we are" href="#about" О нас
 				li
-					a.scroll.brand-2 title="Get in touch!" href="#contact" Contact
+					a.scroll.brand-2 title="Get in touch!" href="#contact" Контакты
 				li
-					a.brand-4 title="External page sample" href="sample-page.html" Sample Page
+					a.brand-4 title="External page sample" href="sample-page.html" Войти
 /! Home Page
 .page.color-1 id="home"
 	.inner-page
-		h2.page-headline.large Tell your projects awesome story.
+		h2.page-headline.large Научись инвестировать в акции за 30 дней!
 	.row-fluid.inner-page
-		.span8.pull-right.lazy-container
+		.span7.pull-right.lazy-container
 			= image_tag "pixel.png", "data-original" => asset_path("home.png"), "alt" => "Looks great on every device", "class" => "lazy"
-		.span4.pull-right
+		.span5.pull-right
 			ul.big-list
 				li
 					i.icon-ok 
-					| Flat design
+					| В удобном месте
 				li
 					i.icon-tablet 
-					| Responsive
+					| В удобное время
 				li
 					i.icon-cloud 
-					| Fast page load
+					| По своему расписанию
 				li
 					i.icon-cog 
-					| Built with LESS
+					| На любом устройстве
 			br
 			a.scroll.btn.btn-centered href="#features" title="Check out more freatures!"
 				i.icon-caret-down 
-				| Learn more
+				|&nbsp;Начать!
 /! Sign up
 .sign-up.color-2.visible-desktop
 	.row-fluid.inner-page
-		.span12
-			h4.pull-left They say visitors prefer scrolling rather than clicking. We combined both.
+		.span9.pull-left
+			h4
+				|Не уверены что вам нужно учиться?
+				br
+				|Пройди бесплатный тест за 5 минут и узнай свой уровень финансовой грамотности!
+		.span3.pull-right
 			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
 				i.icon-caret-down 
-				| Scroll down
+				|&nbsp;Пройти тест
 /! Features
 #features.page.color-4
 	.inner-page
-		h2.page-headline Why should you choose The Story
+		h2.page-headline 10 минут на 1 урок в день и через месяц вы станете профессионалом
 	.inner-page.row-fluid
 		ul.features.list-inline
 			li
 				h3
 					i.icon-cog
-					| Make it your own
-				p Easily change every color, by changing just few variables. Add or remove pages, and choose from 600+ fonts.
+					|&nbsp;Учись
+				p Теория состоит из уроков написанных простым и доступным языком на основе одного из самых популярных курсов об инвестировании в мире.
 			li
 				h3
 					i.icon-heart
-					| Page speed
-				p The theme is highly optimized to ensure fast loading time by lazy-loading of images and beeing minimal by design.
+					|&nbsp;Практикуйся
+				p Лучшее обучение это «обучение через действие». После каждого урока вам предложат пройти проверочный тест и выполнить практическое задание чтобы.
 			li
 				h3
 					i.icon-tablet
-					| For every device.
-				p
-					strong The Story
-					| is built to look great on every device. Custom menu for mobile devices, to ensure the best expierence.
+					|&nbsp;Зарабатывай
+				p Выполняя задания вы будете зарабатывать виртуальные деньги которые можно будет обменять на реальные услуги и сервисы наших партнеров.
 	.row-fluid.inner-page
 		.span6.lazy-container
 			= image_tag "pixel.png", "data-original" => asset_path("two-phones.png"), "alt" => "Zombie ipsum", "class" => "figurette lazy"
 		.span6
-			h3 All artwork included
-			p.lead Present your project properly. Create your own art from included templates
-			ul.list-wide
-				li
-					i.icon-check
-					| More than 300 awesome icons from
-					a href="http://fortawesome.github.io/Font-Awesome/" title="awesome font, awesome"
-				li
-					i.icon-check
-					| Browser icons
-				li
-					i.icon-check
-					| Phone, tablet, laptop, desktop vectors (SVG)
-				li
-					i.icon-check
-					| 5 Layered PSD files.
+			h3 Это действительно очень удобно!
+			p Деньги не любят суеты. Наоборот, чтобы стать успешным инвестором требуется внимательность и дисциплина.Вы сами управляете расписанием и темпом обучения, а интеллектуальная система поддержки напомнит вам о следующем уроке и достигнутом прогрессе в прохождении курса.
+			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				|&nbsp;Начать!
+			/p.lead Present your project properly. Create your own art from included templates
+			/ul.list-wide
+				/li
+					/i.icon-check
+					/| More than 300 awesome icons from
+					/a href="http://fortawesome.github.io/Font-Awesome/" title="awesome font, awesome"
+				/li
+					/i.icon-check
+					/| Browser icons
+				/li
+					/i.icon-check
+					/| Phone, tablet, laptop, desktop vectors (SVG)
+				/li
+					/i.icon-check
+					/| 5 Layered PSD files.
 	hr
-		/! Video
-		.row-fluid.inner-page
-			.span6.pull-right
-				.btn-container.figurette
-					= image_tag "video.png", "alt" => "Play video"
-					a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
-						i.icon-play
-			.span6.pull-right
-				ul.big-list
-					li
-						i.icon-ok
-						| Always latest bootstrap
-					li
-						i.icon-play
-						| Responsive video
-					li
-						i.icon-resize-full
-						| Adaptive, smart lightbox
-					li
-						i.icon-desktop
-						| All modern browsers supported
-				br/
-				a.scroll.btn.btn-centered href="#download"
-					i.icon-plus
-					| Even more features
+	/! Video
+	.row-fluid.inner-page
+		.span6.pull-right
+			.btn-container.figurette
+				= image_tag "video.png", "alt" => "Play video"
+				a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
+					i.icon-play
+		.span6.pull-right
+			ul.big-list
+				li
+					i.icon-ok
+					| Как устроен фондовый рынок
+				li
+					i.icon-play
+					| Как выбрать акции
+				li
+					i.icon-resize-full
+					| Как составить инвестиционный портфель
+				li
+					i.icon-desktop
+					| Как приемы используют лучшие инвесторы
+			br/
+			a.scroll.btn.btn-centered href="#download"
+				i.icon-plus
+				|&nbsp;Начать!
 /! /Features
 
 /! Assets page
 #assets.page.color-3
 	.inner-page
-		h2.page-headline Page assets
+		h2.page-headline Зачем учиться инвестировать?
 	/! Vectors
 	.row-fluid.inner-page
 		.span6.lazy-container
 			= image_tag "pixel.png", "data-original" => asset_path("responsive-vectors.png"), "alt" => "Original vectors", "class" => "figurette lazy"
 		.span6
-			h3 5 vectors included
-			p.lead
-				| Zombie ipsum
-				abbr.initialism title="HyperText Markup Language"
-				| reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
-			p The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro..
+			p Мы все имеем какие-то финансовые цели в жизни: оплатить обучение наших детей, иметь сбережения к моменту выхода на пенсию, приобрести желаемые вещи. К сожалению, просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения наших целей. Мы должны делать больше; мы должны инвестировать наши сбережения и  заставлять наши деньги работать. Акции – это, безусловно, один из лучших способов заставить ваши инвестированные средства работать самым эффективным способом. Инвестирование в акции не требует незаурядных умственных способностей. Мы обучим вас всему необходимому в ходе наших уроков.
 	/! /vectors
 	hr
 		/! Big laptop
@@ -146,12 +148,12 @@ header.navbar.navbar-fixed-top
 				.lazy-container.lazy-large.btn-container.loaded
 					.btn-container
 						= image_tag "laptop-blue@2x.png", "data-original" => asset_path("laptop-blue@2x.png"), "alt" => "view image in lightbox", "class" => "figurette lazy"
-						a.lightbox.btn-play href="assets/img/superman.jpg" target="_blank"
+						a.lightbox.btn-play href=asset_path("superman.jpg") target="_blank"
 							i.icon-zoom-in
 		/! Clients
 		.clients.color-1
 			.inner-page
-				h2.page-headline Who's using stories.
+				h2.page-headline Мы работаем в лучшими компаниями.
 			.inner-page.row-fluid
 				ul.clients.list-inline
 					li
@@ -171,93 +173,53 @@ header.navbar.navbar-fixed-top
 /! About page
 #about.page.color-4
 	.inner-page
-		h2.page-headline Who are we and how it all got started. Our story.
+		h2.page-headline Кто мы и почему мы запустили этот проект?
 	.row-fluid.inner-page
 		.span6.lazy-container
 			= image_tag "pixel.png", "data-original" => asset_path("green-office.png"), "alt" => "Our workspace", "class" => "figurette lazy"
 		.span6
-			h3 Zonbi tattered for solum.
-			p.lead The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.
-			p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
-	hr
-		/! Team
-		.row-fluid.inner-page.team
-			.span6
-				= image_tag "cookies2.png", "alt" => "A cookie", "class" => "pull-left"
-
-				h4 Jane Doe
-				p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
-				ul
-					li
-						i.icon-home
-						a href="prettystrap.com"
-							|http://prettystrap.com
-					li
-						i.icon-envelope-alt
-						a href="info@email.com"
-							|info@email.com
-					li.social
-						a href="#about"
-							i.icon-facebook-sign
-						a href="#about"
-							i.icon-twitter
-						a href="#about"
-							i.icon-github-sign
-			.span6.team2
-				= image_tag "cookies2.png", "alt" => "A cookie", "class" => "pull-left"
-				h4 John Doe
-				p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
-				ul
-					li
-						i.icon-home
-						a href="prettystrap.com"
-							|http://prettystrap.com
-					li
-						i.icon-envelope-alt
-						a href="info@email.com"
-							|info@email.com
-					li.social
-						a href="#about"
-							i.icon-facebook-sign
-						a href="#about"
-							i.icon-twitter
-						a href="#about"
-							i.icon-github-sign
+			p Идея создания этого сервиса пришла нам не просто так. Мы сами прошли путь начинающего инвестора пробуя и  ошибаясь, тратя время и деньги. Мы посещали учебные курсы и вебинары, общались с инвестиционными консультантами, читали книги об инвестициях, потому что не нашли такого сервиса, где можно было бы получить всю информацию для того чтобы уверенно принимать решения об инвестициях в одном месте и в удобной форме.
+			p Поэтому мы создали этот учебный курс в котором соединили лучшие практики обучения инвестициям и  современные технологии онлайн обучения. Наша главная цель — сделать процесс обучения быстрым, простым и  удобным, чтобы минимум действий приносил максимум результатов.
+			a.scroll.btn.btn-centered href="#download"
+				i.icon-plus
+				|&nbsp;Начать!
+	
 /! Contact Us
 #contact.page.color-2
 	.inner-page
-		h2.page-headline Get in touch and stay updated
+		h2.page-headline Оставайтесь на связи и следите за обновлениями
 	.row-fluid.inner-page.contact
 		.span6
-			h3 What's on your mind?
-			textarea placeholder="Your story" rows="6"
-			input placeholder="your@e-mail.com" type="text"
+			h3 Будем рады вопросам и предложениями
+			textarea placeholder="Сообщение" rows="6"
+			input placeholder="E-mail" type="text"
 				br/
-				input placeholder="Name" type="text"
+				input placeholder="Имя" type="text"
 					br/
-					button.btn.btn-centered Contact us
+					button.btn.btn-centered Отправить
 		.span6
 			.btn-container.centered.lazy-container.text-center
 				= image_tag "pixel.png", "data-original" => asset_path("map.png"), "alt" => "Open the map", "class" => "figurette lazy"
-				a.lightbox.iframe.btn-map href="https://maps.google.com/maps?q=Stationsplein,+1012+Centrum,+Amsterdam,+Noord-Holland,+The+Netherlands&amp;hl=en" target="blank" title="Open google maps"
+				a.lightbox.iframe.btn-map href="https://maps.google.com/maps?q=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C,+1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&amp;hl=ru" target="blank" title="Open google maps"
 					i.pull-left.icon-map-marker
 					div
-						| Stationsplein, 1012 AB,
+						| Красная площадь, 1,
 						br
-						| Amsterdam,
+						| Москва,
 						br
-						| The Netherlands
+						| Россия
 
 /! Newsletter
 .newsletter.color-1
 	.inner-page.row-fluid
 		.span4
 			h4
-				strong Be cool, subscribe to get our latest news
+				strong Будь спокоен, 
+				| подпишись и оставайся в курсе новостей
 		.span6
 			input.subscribe name="EMAIL" placeholder="your@e-mail.com" type="email"
 		.span2
-			button.btn.pull-right.subscribe type="submit" Submit
+			button.btn.pull-right.subscribe type="submit" Подписаться
 /! The footer, social media icons, and copyright
 footer.page.color-5
 	.inner-page.row-fluid
@@ -273,7 +235,7 @@ footer.page.color-5
 		.span6.text-right.copyright
 			| &copy; 2013
 			a href="http://prettystrap.com" title="twitter bootstrap themes"
-			| all rights reserved
-			a.scroll href="#top" title="Got to top"
-				| To top
+			|&nbsp;Все права защищены
+			a.scroll href="#top" title="Наверх"
+				|&nbsp; На верх
 				i.icon-caret-up
