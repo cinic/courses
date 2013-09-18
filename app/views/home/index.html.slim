@@ -1,37 +1,279 @@
-- content_for :test do
-	div.go-to-test.group
-		div.layout.group
-			h3.go-to-test__title Не уверены что вам нужен наш курс?
-			p Пройдите тест и узнайте уровень своих знаний об инвестировании в ценные бумаги за 5 минут!
-			a.go-to-test__link.pseudo-button.pseudo-button_orange Пройти тест
-div.promo.promo_1.group
-	div.layout.group
-		h2.promo__title Инвестируй уверенно!
-		p.promo__text Пройди первый полностью интерактивный курс и узнай, как зарабатывать на бирже и избегать потерь. Стань профессионалом, и уверенно оперируй торговыми рисками. Куда инвестировать? Есть разные варианты инвестиций. Но прежде всего давайте вместе уточним основные принципы инвестирования.
-		a.promo__link.pseudo-button.pseudo-button_orange href="/account/registration" Регистрация
-		span.promo__img
-ul.layout.benefits.group
-	li.benefits__layout.benefits__layout_effectively
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Эффективно
-		p Теоретическая часть из 10 глав
-		p Проверочные тесты и задания
-		p Практические задания с реальными акциями
-		a.benefits__link href="#" Далее
-	li.benefits__layout.benefits__layout_comfortably
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Удобно
-		p Учитесь там, где Вам удобно
-		p Контролируйте прогресс обучения
-		p Сами планируйте расписание и темп обучения
-		a.benefits__link href="#" Далее
-	li.benefits__layout.benefits__layout_profitably
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Выгодно
-		p Больше шансов заработать
-		p Меньше вероятность проиграть
-		p Совершено бесплатно!
-		a.benefits__link href="#" Далее
+/! Nav button
+a.closed id="toggle"
+	i.icon-reorder
+/! Navigation
+header.navbar.navbar-fixed-top
+	div.inner-page
+		h1.logo The Story
+		div id="nav"
+			ul.nav
+				li.active
+					a.scroll.brand-1 title="Home page" href="#home" Home
+				li
+					a.scroll.brand-4 title="Check out our awesome services" href="#features" Features
+				li
+					a.scroll.brand-3 title="Themes assets" href="#assets" Assets
+				li
+					a.scroll.fadeto.brand-4 title="Who we are" href="#about" About us
+				li
+					a.scroll.brand-2 title="Get in touch!" href="#contact" Contact
+				li
+					a.brand-4 title="External page sample" href="sample-page.html" Sample Page
+/! Home Page
+.page.color-1 id="home"
+	.inner-page
+		h2.page-headline.large Tell your projects awesome story.
+	.row-fluid.inner-page
+		.span8.pull-right.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("home.png"), "alt" => "Looks great on every device", "class" => "lazy"
+		.span4.pull-right
+			ul.big-list
+				li
+					i.icon-ok 
+					| Flat design
+				li
+					i.icon-tablet 
+					| Responsive
+				li
+					i.icon-cloud 
+					| Fast page load
+				li
+					i.icon-cog 
+					| Built with LESS
+			br
+			a.scroll.btn.btn-centered href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				| Learn more
+/! Sign up
+.sign-up.color-2.visible-desktop
+	.row-fluid.inner-page
+		.span12
+			h4.pull-left They say visitors prefer scrolling rather than clicking. We combined both.
+			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				| Scroll down
+/! Features
+#features.page.color-4
+	.inner-page
+		h2.page-headline Why should you choose The Story
+	.inner-page.row-fluid
+		ul.features.list-inline
+			li
+				h3
+					i.icon-cog
+					| Make it your own
+				p Easily change every color, by changing just few variables. Add or remove pages, and choose from 600+ fonts.
+			li
+				h3
+					i.icon-heart
+					| Page speed
+				p The theme is highly optimized to ensure fast loading time by lazy-loading of images and beeing minimal by design.
+			li
+				h3
+					i.icon-tablet
+					| For every device.
+				p
+					strong The Story
+					| is built to look great on every device. Custom menu for mobile devices, to ensure the best expierence.
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("two-phones.png"), "alt" => "Zombie ipsum", "class" => "figurette lazy"
+		.span6
+			h3 All artwork included
+			p.lead Present your project properly. Create your own art from included templates
+			ul.list-wide
+				li
+					i.icon-check
+					| More than 300 awesome icons from
+					a href="http://fortawesome.github.io/Font-Awesome/" title="awesome font, awesome"
+				li
+					i.icon-check
+					| Browser icons
+				li
+					i.icon-check
+					| Phone, tablet, laptop, desktop vectors (SVG)
+				li
+					i.icon-check
+					| 5 Layered PSD files.
+	hr
+		/! Video
+		.row-fluid.inner-page
+			.span6.pull-right
+				.btn-container.figurette
+					= image_tag "video.png", "alt" => "Play video"
+					a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
+						i.icon-play
+			.span6.pull-right
+				ul.big-list
+					li
+						i.icon-ok
+						| Always latest bootstrap
+					li
+						i.icon-play
+						| Responsive video
+					li
+						i.icon-resize-full
+						| Adaptive, smart lightbox
+					li
+						i.icon-desktop
+						| All modern browsers supported
+				br/
+				a.scroll.btn.btn-centered href="#download"
+					i.icon-plus
+					| Even more features
+/! /Features
+
+/! Assets page
+#assets.page.color-3
+	.inner-page
+		h2.page-headline Page assets
+	/! Vectors
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("responsive-vectors.png"), "alt" => "Original vectors", "class" => "figurette lazy"
+		.span6
+			h3 5 vectors included
+			p.lead
+				| Zombie ipsum
+				abbr.initialism title="HyperText Markup Language"
+				| reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+			p The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro..
+	/! /vectors
+	hr
+		/! Big laptop
+		.row-fluid.inner-page
+			.offset1.span10
+				.lazy-container.lazy-large.btn-container.loaded
+					.btn-container
+						= image_tag "laptop-blue@2x.png", "data-original" => asset_path("laptop-blue@2x.png"), "alt" => "view image in lightbox", "class" => "figurette lazy"
+						a.lightbox.btn-play href="assets/img/superman.jpg" target="_blank"
+							i.icon-zoom-in
+		/! Clients
+		.clients.color-1
+			.inner-page
+				h2.page-headline Who's using stories.
+			.inner-page.row-fluid
+				ul.clients.list-inline
+					li
+						i.icon-globe
+						| Earth
+					li
+						i.icon-heart
+						| Love
+					li
+						i.icon-leaf
+						| Leaves
+					li
+						i.icon-cloud
+						| Clouds
+/! /Assets page
+
+/! About page
+#about.page.color-4
+	.inner-page
+		h2.page-headline Who are we and how it all got started. Our story.
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("green-office.png"), "alt" => "Our workspace", "class" => "figurette lazy"
+		.span6
+			h3 Zonbi tattered for solum.
+			p.lead The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.
+			p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+	hr
+		/! Team
+		.row-fluid.inner-page.team
+			.span6
+				= image_tag "cookies2.png", "alt" => "A cookie", "class" => "pull-left"
+
+				h4 Jane Doe
+				p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+				ul
+					li
+						i.icon-home
+						a href="prettystrap.com"
+							|http://prettystrap.com
+					li
+						i.icon-envelope-alt
+						a href="info@email.com"
+							|info@email.com
+					li.social
+						a href="#about"
+							i.icon-facebook-sign
+						a href="#about"
+							i.icon-twitter
+						a href="#about"
+							i.icon-github-sign
+			.span6.team2
+				= image_tag "cookies2.png", "alt" => "A cookie", "class" => "pull-left"
+				h4 John Doe
+				p Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+				ul
+					li
+						i.icon-home
+						a href="prettystrap.com"
+							|http://prettystrap.com
+					li
+						i.icon-envelope-alt
+						a href="info@email.com"
+							|info@email.com
+					li.social
+						a href="#about"
+							i.icon-facebook-sign
+						a href="#about"
+							i.icon-twitter
+						a href="#about"
+							i.icon-github-sign
+/! Contact Us
+#contact.page.color-2
+	.inner-page
+		h2.page-headline Get in touch and stay updated
+	.row-fluid.inner-page.contact
+		.span6
+			h3 What's on your mind?
+			textarea placeholder="Your story" rows="6"
+			input placeholder="your@e-mail.com" type="text"
+				br/
+				input placeholder="Name" type="text"
+					br/
+					button.btn.btn-centered Contact us
+		.span6
+			.btn-container.centered.lazy-container.text-center
+				= image_tag "pixel.png", "data-original" => asset_path("map.png"), "alt" => "Open the map", "class" => "figurette lazy"
+				a.lightbox.iframe.btn-map href="https://maps.google.com/maps?q=Stationsplein,+1012+Centrum,+Amsterdam,+Noord-Holland,+The+Netherlands&amp;hl=en" target="blank" title="Open google maps"
+					i.pull-left.icon-map-marker
+					div
+						| Stationsplein, 1012 AB,
+						br
+						| Amsterdam,
+						br
+						| The Netherlands
+
+/! Newsletter
+.newsletter.color-1
+	.inner-page.row-fluid
+		.span4
+			h4
+				strong Be cool, subscribe to get our latest news
+		.span6
+			input.subscribe name="EMAIL" placeholder="your@e-mail.com" type="email"
+		.span2
+			button.btn.pull-right.subscribe type="submit" Submit
+/! The footer, social media icons, and copyright
+footer.page.color-5
+	.inner-page.row-fluid
+		.span6.social
+			a href="#contact"
+				i.icon-twitter
+			a href="#contact"
+				i.icon-github-sign
+			a href="#contact"
+				i.icon-facebook-sign
+			a href="#contact"
+				i.icon-google-plus-sign
+		.span6.text-right.copyright
+			| &copy; 2013
+			a href="http://prettystrap.com" title="twitter bootstrap themes"
+			| all rights reserved
+			a.scroll href="#top" title="Got to top"
+				| To top
+				i.icon-caret-up

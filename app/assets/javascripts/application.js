@@ -10,8 +10,14 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require modernizr
-//= require jquery
-//= require jquery_ujs
-//= require jquery_nested_form
+// require jquery_ujs
+// require jquery_nested_form
+
+//= require jquery-1.9.1.min
+//= require lazyload
+//= require jRespond
+//= require spin
+//= require bootstrap.min
+//= require lightbox.min
+//= require responsive-nav
 //= require_tree .
