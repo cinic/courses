@@ -26,11 +26,8 @@ html lang="en"
 		= csrf_meta_tags
 
 	body id="top" data-spy="scroll" data-target=".navbar" data-offset="50"
-		/div.account
-			/ul.account-auth
-				/= render "shared/navigation"
-		/- flash.each do |name, msg|
-			/- if msg.is_a?(String)
-				/= content_tag :span, msg, :id => "flash_#{name}"
+		- flash.each do |name, msg|
+			- if msg.is_a?(String)
+				= content_tag :span, msg, :id => "flash_#{name}"
 
 		= yield
