@@ -1,37 +1,240 @@
-- content_for :test do
-	div.go-to-test.group
-		div.layout.group
-			h3.go-to-test__title Не уверены что вам нужен наш курс?
-			p Пройдите тест и узнайте уровень своих знаний об инвестировании в ценные бумаги за 5 минут!
-			a.go-to-test__link.pseudo-button.pseudo-button_orange Пройти тест
-div.promo.promo_1.group
-	div.layout.group
-		h2.promo__title Инвестируй уверенно!
-		p.promo__text Пройди первый полностью интерактивный курс и узнай, как зарабатывать на бирже и избегать потерь. Стань профессионалом, и уверенно оперируй торговыми рисками. Куда инвестировать? Есть разные варианты инвестиций. Но прежде всего давайте вместе уточним основные принципы инвестирования.
-		a.promo__link.pseudo-button.pseudo-button_orange href="/account/registration" Регистрация
-		span.promo__img
-ul.layout.benefits.group
-	li.benefits__layout.benefits__layout_effectively
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Эффективно
-		p Теоретическая часть из 10 глав
-		p Проверочные тесты и задания
-		p Практические задания с реальными акциями
-		a.benefits__link href="#" Далее
-	li.benefits__layout.benefits__layout_comfortably
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Удобно
-		p Учитесь там, где Вам удобно
-		p Контролируйте прогресс обучения
-		p Сами планируйте расписание и темп обучения
-		a.benefits__link href="#" Далее
-	li.benefits__layout.benefits__layout_profitably
-		span.benefits__cover
-		span.benefits__arrow
-		h3.benefits__title Выгодно
-		p Больше шансов заработать
-		p Меньше вероятность проиграть
-		p Совершено бесплатно!
-		a.benefits__link href="#" Далее
+/! Nav button
+a.closed id="toggle"
+	i.icon-reorder
+/! Navigation
+header.navbar.navbar-fixed-top
+	div.inner-page
+		h1.logo i–Polza
+		div id="nav"
+			ul.nav
+				li.active
+					a.scroll.brand-1 title="Home page" href="#home"
+						i.icon-home
+				li
+					a.scroll.brand-4 title="Check out our awesome services" href="#features" Как это работает
+				li
+					a.scroll.brand-3 title="Themes assets" href="#assets" Зачем
+				li
+					a.scroll.fadeto.brand-4 title="Who we are" href="#about" О нас
+				li
+					a.scroll.brand-2 title="Get in touch!" href="#contact" Контакты
+				= render "shared/navigation"
+/! Home Page
+.page.color-1 id="home"
+	.inner-page
+		h2.page-headline.large Научись инвестировать в акции за 30 дней!
+	.row-fluid.inner-page
+		.span7.pull-right.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("home.png"), "alt" => "Looks great on every device", "class" => "lazy"
+		.span5.pull-right
+			ul.big-list
+				li
+					i.icon-ok 
+					| В удобном месте
+				li
+					i.icon-tablet 
+					| В удобное время
+				li
+					i.icon-cloud 
+					| По своему расписанию
+				li
+					i.icon-cog 
+					| На любом устройстве
+			br
+			a.scroll.btn.btn-centered href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				|&nbsp;Начать!
+/! Sign up
+.sign-up.color-2.visible-desktop
+	.row-fluid.inner-page
+		.span9.pull-left
+			h4
+				|Не уверены что вам нужно учиться?
+				br
+				|Пройди бесплатный тест за 5 минут и узнай свой уровень финансовой грамотности!
+		.span3.pull-right
+			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				|&nbsp;Пройти тест
+/! Features
+#features.page.color-4
+	.inner-page
+		h2.page-headline 10 минут на 1 урок в день и через месяц вы станете профессионалом
+	.inner-page.row-fluid
+		ul.features.list-inline
+			li
+				h3
+					i.icon-cog
+					|&nbsp;Учись
+				p Теория состоит из уроков написанных простым и доступным языком на основе одного из самых популярных курсов об инвестировании в мире.
+			li
+				h3
+					i.icon-heart
+					|&nbsp;Практикуйся
+				p Лучшее обучение это «обучение через действие». После каждого урока вам предложат пройти проверочный тест и выполнить практическое задание чтобы.
+			li
+				h3
+					i.icon-tablet
+					|&nbsp;Зарабатывай
+				p Выполняя задания вы будете зарабатывать виртуальные деньги которые можно будет обменять на реальные услуги и сервисы наших партнеров.
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("two-phones.png"), "alt" => "Zombie ipsum", "class" => "figurette lazy"
+		.span6
+			h3 Это действительно очень удобно!
+			p Деньги не любят суеты. Наоборот, чтобы стать успешным инвестором требуется внимательность и дисциплина.Вы сами управляете расписанием и темпом обучения, а интеллектуальная система поддержки напомнит вам о следующем уроке и достигнутом прогрессе в прохождении курса.
+			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
+				i.icon-caret-down 
+				|&nbsp;Начать!
+			/p.lead Present your project properly. Create your own art from included templates
+			/ul.list-wide
+				/li
+					/i.icon-check
+					/| More than 300 awesome icons from
+					/a href="http://fortawesome.github.io/Font-Awesome/" title="awesome font, awesome"
+				/li
+					/i.icon-check
+					/| Browser icons
+				/li
+					/i.icon-check
+					/| Phone, tablet, laptop, desktop vectors (SVG)
+				/li
+					/i.icon-check
+					/| 5 Layered PSD files.
+	hr
+	/! Video
+	.row-fluid.inner-page
+		.span6.pull-right
+			.btn-container.figurette
+				= image_tag "video.png", "alt" => "Play video"
+				a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
+					i.icon-play
+		.span6.pull-right
+			ul.big-list
+				li
+					i.icon-ok
+					| Как устроен фондовый рынок
+				li
+					i.icon-play
+					| Как выбрать акции
+				li
+					i.icon-resize-full
+					| Как составить инвестиционный портфель
+				li
+					i.icon-desktop
+					| Как приемы используют лучшие инвесторы
+			br/
+			a.scroll.btn.btn-centered href="#download"
+				i.icon-plus
+				|&nbsp;Начать!
+/! /Features
+
+/! Assets page
+#assets.page.color-3
+	.inner-page
+		h2.page-headline Зачем учиться инвестировать?
+	/! Vectors
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("responsive-vectors.png"), "alt" => "Original vectors", "class" => "figurette lazy"
+		.span6
+			p Мы все имеем какие-то финансовые цели в жизни: оплатить обучение наших детей, иметь сбережения к моменту выхода на пенсию, приобрести желаемые вещи. К сожалению, просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения наших целей. Мы должны делать больше; мы должны инвестировать наши сбережения и  заставлять наши деньги работать. Акции – это, безусловно, один из лучших способов заставить ваши инвестированные средства работать самым эффективным способом. Инвестирование в акции не требует незаурядных умственных способностей. Мы обучим вас всему необходимому в ходе наших уроков.
+	/! /vectors
+	hr
+		/! Big laptop
+		.row-fluid.inner-page
+			.offset1.span10
+				.lazy-container.lazy-large.btn-container.loaded
+					.btn-container
+						= image_tag "laptop-blue@2x.png", "data-original" => asset_path("laptop-blue@2x.png"), "alt" => "view image in lightbox", "class" => "figurette lazy"
+						a.lightbox.btn-play href=asset_path("superman.jpg") target="_blank"
+							i.icon-zoom-in
+		/! Clients
+		.clients.color-1
+			.inner-page
+				h2.page-headline Мы работаем в лучшими компаниями.
+			.inner-page.row-fluid
+				ul.clients.list-inline
+					li
+						i.icon-globe
+						| Earth
+					li
+						i.icon-heart
+						| Love
+					li
+						i.icon-leaf
+						| Leaves
+					li
+						i.icon-cloud
+						| Clouds
+/! /Assets page
+
+/! About page
+#about.page.color-4
+	.inner-page
+		h2.page-headline Кто мы и почему мы запустили этот проект?
+	.row-fluid.inner-page
+		.span6.lazy-container
+			= image_tag "pixel.png", "data-original" => asset_path("green-office.png"), "alt" => "Our workspace", "class" => "figurette lazy"
+		.span6
+			p Идея создания этого сервиса пришла нам не просто так. Мы сами прошли путь начинающего инвестора пробуя и  ошибаясь, тратя время и деньги. Мы посещали учебные курсы и вебинары, общались с инвестиционными консультантами, читали книги об инвестициях, потому что не нашли такого сервиса, где можно было бы получить всю информацию для того чтобы уверенно принимать решения об инвестициях в одном месте и в удобной форме.
+			p Поэтому мы создали этот учебный курс в котором соединили лучшие практики обучения инвестициям и  современные технологии онлайн обучения. Наша главная цель — сделать процесс обучения быстрым, простым и  удобным, чтобы минимум действий приносил максимум результатов.
+			a.scroll.btn.btn-centered href="#download"
+				i.icon-plus
+				|&nbsp;Начать!
+	
+/! Contact Us
+#contact.page.color-2
+	.inner-page
+		h2.page-headline Оставайтесь на связи и следите за обновлениями
+	.row-fluid.inner-page.contact
+		.span6
+			h3 Будем рады вопросам и предложениями
+			textarea placeholder="Сообщение" rows="6"
+			input placeholder="E-mail" type="text"
+				br/
+				input placeholder="Имя" type="text"
+					br/
+					button.btn.btn-centered Отправить
+		.span6
+			.btn-container.centered.lazy-container.text-center
+				= image_tag "pixel.png", "data-original" => asset_path("map.png"), "alt" => "Open the map", "class" => "figurette lazy"
+				a.lightbox.iframe.btn-map href="https://maps.google.com/maps?q=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C,+1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&amp;hl=ru" target="blank" title="Open google maps"
+					i.pull-left.icon-map-marker
+					div
+						| Красная площадь, 1,
+						br
+						| Москва,
+						br
+						| Россия
+
+/! Newsletter
+.newsletter.color-1
+	.inner-page.row-fluid
+		.span4
+			h4
+				strong Будь спокоен, 
+				| подпишись и оставайся в курсе новостей
+		.span6
+			input.subscribe name="EMAIL" placeholder="your@e-mail.com" type="email"
+		.span2
+			button.btn.pull-right.subscribe type="submit" Подписаться
+/! The footer, social media icons, and copyright
+footer.page.color-5
+	.inner-page.row-fluid
+		.span6.social
+			a href="#contact"
+				i.icon-twitter
+			a href="#contact"
+				i.icon-github-sign
+			a href="#contact"
+				i.icon-facebook-sign
+			a href="#contact"
+				i.icon-google-plus-sign
+		.span6.text-right.copyright
+			| &copy; 2013
+			a href="http://prettystrap.com" title="twitter bootstrap themes"
+			|&nbsp;Все права защищены
+			a.scroll href="#top" title="Наверх"
+				|&nbsp; На верх
+				i.icon-caret-up
