@@ -1,8 +1,8 @@
 - if user_signed_in?
-	li.account-auth__layout-item #{link_to('Выйти', destroy_user_session_path, :method=>'delete', :class=>'account-auth__item pseudo-button pseudo-button_orange')}
+	li #{link_to('Профиль', edit_user_registration_path, :class=>'brand-4', :title => 'Редактировать профиль')}
 - else
-	li.account-auth__layout-item #{link_to('Войти', new_user_session_path, :class=>'account-auth__item pseudo-button pseudo-button_orange')}
+	li #{link_to('Регистрация', new_user_registration_path, :class=>'brand-4', :title => 'Зарегистрироваться')}
 - if user_signed_in?
-	li.account-auth__layout-item #{link_to('Профиль', edit_user_registration_path, :class=>'account-auth__item pseudo-button pseudo-button_orange')}
+	li #{link_to('Выйти', destroy_user_session_path, :method=>'delete', :class=>'brand-4', :title => 'Выйти из аккаунта')}
 - else
-	li.account-auth__layout-item #{link_to('Регистрация', new_user_registration_path, :class=>'account-auth__item pseudo-button pseudo-button_orange')}
+	li #{link_to('Войти', new_user_session_path, :class=>'brand-4', :title => 'Войти в аккаунт')}
