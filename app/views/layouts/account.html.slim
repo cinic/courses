@@ -14,7 +14,7 @@ html lang="en"
     		= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     	/! Le fav
     	link rel="shortcut icon" href=asset_path("favicon.ico")
-    	/= javascript_include_tag "application"
+    	= javascript_include_tag "account"
 
 		= csrf_meta_tags
 
@@ -24,3 +24,5 @@ html lang="en"
 				= content_tag :span, msg, :id => "flash_#{name}"
 
 		= yield
+		.copyright
+			| 2013 © i–Polza
