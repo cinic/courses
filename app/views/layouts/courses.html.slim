@@ -1,0 +1,64 @@
+doctype html
+html lang="en"
+	head
+		title
+			= (yield(:title) + " — " unless yield(:title).blank?).to_s + "i–Polza"
+		meta name="keywords" content="Аккаунт в Тренинговый центр"
+		meta name="description" content="Тренинговый центр I-Polza"
+    	meta name="author" content="iFoxy LLC"
+
+    	= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=PT+Sans:300,400,600"
+    	= stylesheet_link_tag    "account"
+    	/! Le HTML5 shim, for IE6-8 support of HTML5 elements
+    	/[if lt IE 9]
+    		= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    	/! Le fav
+    	link rel="shortcut icon" href=asset_path("favicon.ico")
+    	= javascript_include_tag "account"
+
+		= csrf_meta_tags
+
+	body class=yield(:body_class)
+		- flash.each do |name, msg|
+			- if msg.is_a?(String)
+				= content_tag :span, msg, :id => "flash_#{name}"
+
+		.header.navbar.navbar-inverse.navbar-fixed-top
+			/! BEGIN TOP NAVIGATION BAR
+			.navbar-inner
+				.container-fluid
+					/! BEGIN LOGO
+					a.brand href="/" i–Polza
+					/! END LOGO           
+					/! BEGIN TOP NAVIGATION MENU
+					ul.nav.pull-right
+						/! BEGIN USER LOGIN DROPDOWN
+						li.dropdown.user
+							a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
+								/img alt="" src="assets/img/avatar1_small.jpg"
+								span.username Bob Nilson
+								i.icon-angle-down
+							ul.dropdown-menu
+								li
+									a href="extra_profile.html"
+										i.icon-user
+										| My Profile
+								li.divider
+								li
+									a href="login.html"
+										i.icon-key
+										| Log Out
+						/! END USER LOGIN DROPDOWN
+					/! END TOP NAVIGATION MENU
+			/! END TOP NAVIGATION BAR
+
+		.page-container
+			.page-content
+				.container-fluid
+					.row-fluid
+						.span12
+							= yield
+		footer.footer
+			.footer-inner
+				.copyright
+					| 2013 © i–Polza

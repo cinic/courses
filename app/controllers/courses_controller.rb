@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   before_filter :authenticate_user!
-  layout "account"
+  layout "courses"
   # GET /courses
   # GET /courses.json
   def index
