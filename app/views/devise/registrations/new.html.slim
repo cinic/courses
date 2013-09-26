@@ -1,22 +1,29 @@
 - content_for :body_class, "login"
-h2 Регистрация
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  div
-    = f.label :name, 'Полное имя'
-    br/
-    = f.text_field :name, :autofocus => true
-  div
-    = f.label :email
-    br/
-    = f.email_field :email
-  div
-    = f.label :password, 'Пароль'
-    br/
-    = f.password_field :password
-  /div
-  /  = f.label :password_confirmation
-  /  br/
-  /  = f.password_field :password_confirmation
-  div= f.submit "Зарегистрироваться"
-= render "devise/shared/links"
+
+.logo iPolza
+.content
+	h2.form-title Регистрация
+	= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { :class => "form-vertical login-form"}) do |f|
+		= devise_error_messages!
+		.control-group
+			= f.label :name, 'Полное имя', :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-font
+					= f.text_field :name, :autofocus => true, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Полное имя"
+		.control-group
+			= f.label :email, :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-user
+					= f.email_field :email, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Email"
+		.control-group
+			= f.label :password, :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-user
+					= f.password_field :password, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Password"	
+		.form-actions
+			= f.submit "Зарегистрироваться", :class => "btn green pull-right"
+				/i.m-icon-swapright.m-icon-white
+	= render "devise/shared/links"

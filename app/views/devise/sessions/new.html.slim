@@ -3,7 +3,7 @@
 .logo iPolza
 .content
 
-	h2.form-title Вход
+	h2.form-title Вход в аккаунт
 	= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { :class => "form-vertical login-form"}) do |f|
 		.control-group
 			= f.label :email, :class => "control-label visible-ie8 visible-ie9"
