@@ -18,7 +18,7 @@ html lang="en"
 
 		= csrf_meta_tags
 
-	body class=yield(:body_class)
+	body.page-header-fixed
 		- flash.each do |name, msg|
 			- if msg.is_a?(String)
 				= content_tag :span, msg, :id => "flash_#{name}"
