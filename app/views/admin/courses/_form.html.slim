@@ -13,6 +13,12 @@
 	.field
 		= f.label :description
 		= f.text_area :description
+	.field
+		= f.label :level
+		= f.text_field :level
+	.field
+		= f.label :position
+		= f.text_field :position
 
 	= f.fields_for :chapters do |builder|
     	= render "chapter_fields", :f => builder
