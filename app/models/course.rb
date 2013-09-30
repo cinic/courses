@@ -4,6 +4,8 @@ class Course
 
   field :title, type: String
   field :description, type: String
+  field :level, type: Integer
+  field :position, type: Integer
   validates_presence_of :title
 
   belongs_to :course_type

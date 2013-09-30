@@ -35,8 +35,10 @@ class CoursesController < ApplicationController
     #@course = Course.find(params[:id])
     @all_courses = Course.all
     @course_type = CourseType.named(params[:slug]).first
-    @courses = Course.typed(@course_type)
-
+    @courses = Course.typed(@course_type).order_by([[:level, :asc],[:position, :asc]])
+    
+    @crs = @courses.group_by { |item| item.level }
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @courses }

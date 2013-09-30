@@ -1,7 +1,53 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.tabs {
+	position: relative;
+	margin: 0 0 0 1px;
+}
+	.tabs__title {
+		float:left;
+		margin:0 0 0 2px;
+		padding:12px 10px 12px;
+		line-height: 12px;
+		height:18px;
+		font-weight: 400;
+		background:#00aed7;
+		text-align: center;
+		color:#FFF;
+	}
+	.tabs__title_mini {
+		padding: 10px 0;
+		height: 10px;
+		line-height: 10px;
+	}
+	.tabs__title {
+		cursor:pointer;
+	}
+	.js .tabs__title_mini {
+		width: 81px;
+	}
+	.js .tabs__title_2 {
+		width: 168px;
+	}
+	.tabs__title.active {
+		cursor: auto;
+	}
+	.tabs__title:hover,
+	.tabs__title.active {
+		color: #00abd6;
+		background: none;
+	}
+	.tabs__content {
+		position:relative;
+		float:right;
+		display: none;
+		margin:44px 0 0 -100%;
+		padding:0;
+		width:100%;
+		height:auto;
+	}
+	.tabs__content.active { display: block; }
 .course-title {
 	margin: 0;
 	padding: 9px 0 3px;
