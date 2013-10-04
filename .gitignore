@@ -15,4 +15,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< HEAD
 /public/google*
+=======
+/public/google*
+>>>>>>> develop
