@@ -4,7 +4,7 @@ a.closed id="toggle"
 /! Navigation
 header.navbar.navbar-fixed-top
 	div.inner-page
-		h1.logo i–Polza
+		h1.logo Polza
 		div id="nav"
 			ul.nav
 				li.active
@@ -25,7 +25,7 @@ header.navbar.navbar-fixed-top
 		h2.page-headline.large Научись инвестировать в акции за 30 дней!
 	.row-fluid.inner-page
 		.span7.pull-right.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("home.png"), "alt" => "Looks great on every device", "class" => "lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("home.png"), "alt" => "Почему мы начали этот проект", "class" => "lazy"
 		.span5.pull-right
 			ul.big-list
 				li
@@ -41,9 +41,9 @@ header.navbar.navbar-fixed-top
 					i.icon-cog 
 					| На любом устройстве
 			br
-			a.scroll.btn.btn-centered href="#features" title="Check out more freatures!"
+			a.scroll.btn.btn-centered href="#features" title="Подробнее!"
 				i.icon-caret-down 
-				|&nbsp;Начать!
+				|&nbsp;Подробнее
 /! Sign up
 .sign-up.color-2.visible-desktop
 	.row-fluid.inner-page
@@ -64,28 +64,29 @@ header.navbar.navbar-fixed-top
 		ul.features.list-inline
 			li
 				h3
-					i.icon-cog
+					i.icon-book
 					|&nbsp;Учись
 				p Теория состоит из уроков написанных простым и доступным языком на основе одного из самых популярных курсов об инвестировании в мире.
 			li
 				h3
-					i.icon-heart
+					i.icon-puzzle-piece
 					|&nbsp;Практикуйся
-				p Лучшее обучение это «обучение через действие». После каждого урока вам предложат пройти проверочный тест и выполнить практическое задание чтобы.
+				p Лучшее обучение это «обучение через действие». После каждого урока вам предложат пройти проверочный тест и выполнить практическое задание.
 			li
 				h3
-					i.icon-tablet
+					i.icon-usd
 					|&nbsp;Зарабатывай
-				p Выполняя задания вы будете зарабатывать виртуальные деньги которые можно будет обменять на реальные услуги и сервисы наших партнеров.
+				p Выполняя задания вы будете зарабатывать виртуальные деньги, обменивая их на реальные услуги и сервисы наших партнеров.
 	.row-fluid.inner-page
 		.span6.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("two-phones.png"), "alt" => "Zombie ipsum", "class" => "figurette lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("simple.png"), "alt" => "Это просто", "class" => "figurette lazy"
 		.span6
 			h3 Это действительно очень удобно!
 			p Деньги не любят суеты. Наоборот, чтобы стать успешным инвестором требуется внимательность и дисциплина.Вы сами управляете расписанием и темпом обучения, а интеллектуальная система поддержки напомнит вам о следующем уроке и достигнутом прогрессе в прохождении курса.
-			a.scroll.btn.pull-right href="#features" title="Check out more freatures!"
-				i.icon-caret-down 
-				|&nbsp;Начать!
+			p
+				a.scroll.btn.pull-left href="/courses" title="Начать обучение!"
+					i.icon-caret-down 
+					|&nbsp;Начать!
 			/p.lead Present your project properly. Create your own art from included templates
 			/ul.list-wide
 				/li
@@ -106,25 +107,25 @@ header.navbar.navbar-fixed-top
 	.row-fluid.inner-page
 		.span6.pull-right
 			.btn-container.figurette
-				= image_tag "video.png", "alt" => "Play video"
-				a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
+				= image_tag "how.png", "alt" => "Play video"
+				/a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
 					i.icon-play
 		.span6.pull-right
 			ul.big-list
 				li
-					i.icon-ok
-					| Как устроен фондовый рынок
+					i.icon-exchange
+					| Как устроен фондовый рынок?
 				li
-					i.icon-play
-					| Как выбрать акции
+					i.icon-bar-chart
+					| Как выбрать акции?
 				li
-					i.icon-resize-full
-					| Как составить инвестиционный портфель
+					i.icon-briefcase
+					| Составляем инвест портфель
 				li
-					i.icon-desktop
-					| Как приемы используют лучшие инвесторы
+					i.icon-cogs
+					| Секреты лучших инвесторов
 			br/
-			a.scroll.btn.btn-centered href="#download"
+			a.scroll.btn.btn-centered href="/courses"
 				i.icon-plus
 				|&nbsp;Начать!
 /! /Features
@@ -136,37 +137,13 @@ header.navbar.navbar-fixed-top
 	/! Vectors
 	.row-fluid.inner-page
 		.span6.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("responsive-vectors.png"), "alt" => "Original vectors", "class" => "figurette lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("why.png"), "alt" => "Фондовый рынок", "class" => "figurette lazy"
 		.span6
-			p Мы все имеем какие-то финансовые цели в жизни: оплатить обучение наших детей, иметь сбережения к моменту выхода на пенсию, приобрести желаемые вещи. К сожалению, просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения наших целей. Мы должны делать больше; мы должны инвестировать наши сбережения и  заставлять наши деньги работать. Акции – это, безусловно, один из лучших способов заставить ваши инвестированные средства работать самым эффективным способом. Инвестирование в акции не требует незаурядных умственных способностей. Мы обучим вас всему необходимому в ходе наших уроков.
+			h3 Просто тратить меньше?
+			p.lead Просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения финансовых целей.
+			p Мы должны делать больше; мы должны инвестировать наши сбережения и заставлять наши деньги работать. Акции — это, безусловно, один из лучших способов заставить ваши инвестированные средства работать самым эффективным способом.
 	/! /vectors
 	hr
-		/! Big laptop
-		.row-fluid.inner-page
-			.offset1.span10
-				.lazy-container.lazy-large.btn-container.loaded
-					.btn-container
-						= image_tag "laptop-blue@2x.png", "data-original" => asset_path("laptop-blue@2x.png"), "alt" => "view image in lightbox", "class" => "figurette lazy"
-						a.lightbox.btn-play href=asset_path("superman.jpg") target="_blank"
-							i.icon-zoom-in
-		/! Clients
-		.clients.color-1
-			.inner-page
-				h2.page-headline Мы работаем в лучшими компаниями.
-			.inner-page.row-fluid
-				ul.clients.list-inline
-					li
-						i.icon-globe
-						| Earth
-					li
-						i.icon-heart
-						| Love
-					li
-						i.icon-leaf
-						| Leaves
-					li
-						i.icon-cloud
-						| Clouds
 /! /Assets page
 
 /! About page
@@ -175,8 +152,9 @@ header.navbar.navbar-fixed-top
 		h2.page-headline Кто мы и почему мы запустили этот проект?
 	.row-fluid.inner-page
 		.span6.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("green-office.png"), "alt" => "Our workspace", "class" => "figurette lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("about.png"), "alt" => "Кто мы?", "class" => "figurette lazy"
 		.span6
+			p &nbsp;
 			p Идея создания этого сервиса пришла нам не просто так. Мы сами прошли путь начинающего инвестора пробуя и  ошибаясь, тратя время и деньги. Мы посещали учебные курсы и вебинары, общались с инвестиционными консультантами, читали книги об инвестициях, потому что не нашли такого сервиса, где можно было бы получить всю информацию для того чтобы уверенно принимать решения об инвестициях в одном месте и в удобной форме.
 			p Поэтому мы создали этот учебный курс в котором соединили лучшие практики обучения инвестициям и  современные технологии онлайн обучения. Наша главная цель — сделать процесс обучения быстрым, простым и  удобным, чтобы минимум действий приносил максимум результатов.
 			a.scroll.btn.btn-centered href="#download"
@@ -198,7 +176,7 @@ header.navbar.navbar-fixed-top
 					button.btn.btn-centered Отправить
 		.span6
 			.btn-container.centered.lazy-container.text-center
-				= image_tag "pixel.png", "data-original" => asset_path("map.png"), "alt" => "Open the map", "class" => "figurette lazy"
+				= image_tag "pixel.png", "data-original" => asset_path("map.jpg"), "alt" => "Open the map", "class" => "figurette lazy"
 				a.lightbox.iframe.btn-map href="https://maps.google.com/maps?q=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C,+1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&amp;hl=ru" target="blank" title="Open google maps"
 					i.pull-left.icon-map-marker
 					div
@@ -213,10 +191,9 @@ header.navbar.navbar-fixed-top
 	.inner-page.row-fluid
 		.span4
 			h4
-				strong Будь спокоен, 
-				| подпишись и оставайся в курсе новостей
+				| Подпишись и оставайся в курсе новостей
 		.span6
-			input.subscribe name="EMAIL" placeholder="your@e-mail.com" type="email"
+			input.subscribe name="EMAIL" placeholder="ваш@e-mail.com" type="email"
 		.span2
 			button.btn.pull-right.subscribe type="submit" Подписаться
 /! The footer, social media icons, and copyright

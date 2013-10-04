@@ -1,16 +1,6 @@
 - content_for :title, @course_type.description
 h1 = @course_type.description
 
-/ol.courses-list
-	/- @courses.each do |type|
-		/li.courses-list__item
-			/h2.courses-list-item__title
-				/= type.title
-				/|&nbsp;(#{type.level})
-			/p.courses-list-item__description = type.description
-			/p.courses-list-item__link = link_to "Начать", course_type_url([@course_type.name, type.slugs.last])
-
-
 dl.tabs.group.clearfix
 	- @crs.each do |key, items|
 		dt.tabs__title Уровень #{key}
@@ -18,7 +8,7 @@ dl.tabs.group.clearfix
 			- items.each do |type|
 				.courses-list__item
 					h2.courses-list-item__title
-						= type.level + type.position
+						= type.level + type.position unless type.level == nil && type.position == nil
 						| : &nbsp;
 						= type.title
 					p.courses-list-item__description = type.description

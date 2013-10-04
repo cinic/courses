@@ -1,10 +1,10 @@
 doctype html
-html lang="en"
+html lang="ru"
 	head
 		title
-			= (yield(:title) + " — " unless yield(:title).blank?).to_s + "i–Polza"
+			= (yield(:title) + " — " unless yield(:title).blank?).to_s + "Polza"
 		meta name="keywords" content="Аккаунт в Тренинговый центр"
-		meta name="description" content="Тренинговый центр I-Polza"
+		meta name="description" content="Тренинговый центр Polza"
     	meta name="author" content="iFoxy LLC"
 
     	= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=PT+Sans:300,400,600"
@@ -35,19 +35,16 @@ html lang="en"
 						/! BEGIN USER LOGIN DROPDOWN
 						li.dropdown.user
 							a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-								/img alt="" src="assets/img/avatar1_small.jpg"
-								span.username Bob Nilson
+								= image_tag "pixel.png", "width" => "29", "height" => "29"
+								span.username #{current_user.name}
 								i.icon-angle-down
 							ul.dropdown-menu
 								li
-									a href="extra_profile.html"
-										i.icon-user
-										| My Profile
+									= link_to(raw('<i class="icon-user"></i> Профиль'), edit_user_registration_path, :class=>'brand-4', :title => 'Редактировать профиль')
 								li.divider
 								li
-									a href="login.html"
-										i.icon-key
-										| Log Out
+									/a href="login.html"
+									= link_to(raw('<i class="icon-key"></i> Выйти'), destroy_user_session_path, :method=>'delete', :class=>'brand-4', :title => 'Выйти из аккаунта')
 						/! END USER LOGIN DROPDOWN
 					/! END TOP NAVIGATION MENU
 			/! END TOP NAVIGATION BAR

@@ -1,39 +1,55 @@
-h2.content__title 
-  | Редактировать профиль
-  /| Edit #{resource_name.to_s.humanize}
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = devise_error_messages!
-  div
-    = f.label :name, 'Имя'
-    br/
-    = f.text_field :name, :autofocus => true
-  div
-    = f.label :twitter_name
-    br/
-    = f.text_field :twitter_name
-  div
-    = f.label :email
-    br/
-    = f.email_field :email
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    div
-      | Currently waiting confirmation for: #{resource.unconfirmed_email}
-  div
-    = f.label :password, 'Пароль '
-    i (leave blank if you don't want to change it)
-    br/
-    = f.password_field :password, :autocomplete => "off"
-  /div
-  /  = f.label :password_confirmation
-  /  br/
-  /  = f.password_field :password_confirmation
-  div
-    = f.label :current_password, 'Текущий пароль '
-    i (we need your current password to confirm your changes)
-    br/
-    = f.password_field :current_password
-  div= f.submit "Обновить"
-/h3 Cancel my account
-/p
-/  | Unhappy? #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}.
-/= link_to "Back", :back
+- content_for :title, "Редактировать профиль"
+- content_for :body_class, "login"
+
+.logo Polza
+.content
+	h2.form-title
+		| Редактировать профиль
+		/| Edit #{resource_name.to_s.humanize}
+	= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-vertical login-form" }) do |f|
+		= devise_error_messages!
+		.control-group
+			= f.label :name, 'Полное имя', :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-font
+					= f.text_field :name, :autofocus => true, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Полное имя"
+		.control-group
+			= f.label :email, :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-user
+					= f.email_field :email, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Email"
+					- if devise_mapping.confirmable? && resource.pending_reconfirmation?
+						div
+							| Currently waiting confirmation for: #{resource.unconfirmed_email}
+		.control-group
+			= f.label :twitter_name, :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-twitter
+					= f.text_field :twitter_name, :class => "m-wrap placeholder-no-fix", :placeholder => "Twitter name"
+		.control-group
+			= f.label :password, 'Новый пароль ', :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-lock
+					= f.password_field :password, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Новый пароль"
+			i (leave blank if you don't want to change it)
+		/div
+		/  = f.label :password_confirmation
+		/  br/
+		/  = f.password_field :password_confirmation
+		.control-group
+			= f.label :current_password, 'Текущий пароль ', :class => "control-label visible-ie8 visible-ie9"
+			.controls
+				.input-icon.left
+					i.icon-lock
+					= f.password_field :current_password, :class => "m-wrap placeholder-no-fix", :autocomplete => "off", :placeholder => "Текущий пароль"
+			i (we need your current password to confirm your changes)
+		.form-actions
+			= f.submit "Обновить", :class => "btn green pull-right"
+	/h3 Cancel my account
+	/p
+	/  | Unhappy? #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}.
+	/= link_to "Back", :back

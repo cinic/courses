@@ -1,6 +1,7 @@
+- content_for :title, "Регистрация"
 - content_for :body_class, "login"
 
-.logo iPolza
+.logo Polza
 .content
 	h2.form-title Регистрация
 	= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { :class => "form-vertical login-form"}) do |f|
