@@ -32,3 +32,4 @@ html lang="ru"
 				= content_tag :span, msg, :id => "flash_#{name}"
 
 		= yield
+		= analytics_init if Rails.env.production?
