@@ -24,4 +24,5 @@ gem 'cucumber-rails', '>= 1.3.0', :group => :test, :require => false
 gem 'launchy', '>= 2.1.2', :group => :test
 gem 'factory_girl_rails', '>= 4.0.0', :group => [:development, :test]
 gem 'thin', :group => [:development, :test]
+gem 'google-analytics-rails', :group => :production
 #gem "capistrano", :group => :development
