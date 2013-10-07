@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'modernizr-rails'
 gem 'bson_ext'
 gem 'devise', '>= 2.1.2'
+gem 'devise_invitable'
 gem 'cancan'
 gem 'rspec-rails', '>= 2.11.0', :group => [:development, :test]
 gem 'capybara', '>= 1.1.2', :group => :test

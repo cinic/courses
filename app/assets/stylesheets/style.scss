@@ -10554,7 +10554,8 @@ footer {
 .sign-up a {
   margin-top: 20px;
 }
-/* Footer */.copyright {
+/* Footer */
+.copyright {
   line-height: 50px;
 }
 /* Contact Page */
@@ -10569,6 +10570,12 @@ footer {
 .newsletter h4 {
   font-size: 24px;
   margin: 0;
+}
+.newsletter .inner-page:first-child {
+  padding-top: 140px;
+}
+.newsletter .inner-page:last-child {
+  padding-bottom: 250px;
 }
 .subscribe {
   width: 100%;

@@ -14,7 +14,7 @@ Courses::Application.routes.draw do
   #match 'courses/:id/edit' => 'courses#edit'
   
 
-  devise_for :users, :path => 'account'
+  devise_for :users, :path => 'account', :controllers => { :invitations => 'users/invitations' }
   match 'account' => 'users#index'
   #resources :course_types
   #resources :articles
