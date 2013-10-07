@@ -16,6 +16,7 @@ Courses::Application.routes.draw do
 
   devise_for :users, :path => 'account'
   match 'account' => 'users#index'
+  resources :invitations
   #resources :course_types
   #resources :articles
   #resources :practice

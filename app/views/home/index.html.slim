@@ -17,8 +17,8 @@ header.navbar.navbar-fixed-top
 				li
 					a.scroll.fadeto.brand-4 title="Who we are" href="#about" О нас
 				li
-					a.scroll.brand-2 title="Get in touch!" href="#contact" Контакты
-				= render "shared/navigation"
+					a.scroll.brand-2 title="Get in touch!" href="#contact" Получить приглашение!
+				/= render "shared/navigation"
 /! Home Page
 .page.color-1 id="home"
 	.inner-page
@@ -84,7 +84,7 @@ header.navbar.navbar-fixed-top
 			h3 Это действительно очень удобно!
 			p Деньги не любят суеты. Наоборот, чтобы стать успешным инвестором требуется внимательность и дисциплина.Вы сами управляете расписанием и темпом обучения, а интеллектуальная система поддержки напомнит вам о следующем уроке и достигнутом прогрессе в прохождении курса.
 			p
-				a.scroll.btn.pull-left href="/courses" title="Начать обучение!"
+				a.scroll.btn.pull-left href="#contact" title="Получить приглашение!"
 					i.icon-caret-down 
 					|&nbsp;Начать!
 			/p.lead Present your project properly. Create your own art from included templates
@@ -107,7 +107,7 @@ header.navbar.navbar-fixed-top
 	.row-fluid.inner-page
 		.span6.pull-right
 			.btn-container.figurette
-				= image_tag "how.png", "alt" => "Play video"
+				= image_tag "how.png", "alt" => "Как это работает?"
 				/a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
 					i.icon-play
 		.span6.pull-right
@@ -125,9 +125,9 @@ header.navbar.navbar-fixed-top
 					i.icon-cogs
 					| Секреты лучших инвесторов
 			br/
-			a.scroll.btn.btn-centered href="/courses"
+			a.scroll.btn.btn-centered href="#contact"
 				i.icon-plus
-				|&nbsp;Начать!
+				|&nbsp;Получить приглашение!
 /! /Features
 
 /! Assets page
@@ -137,7 +137,7 @@ header.navbar.navbar-fixed-top
 	/! Vectors
 	.row-fluid.inner-page
 		.span6.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("why.png"), "alt" => "Фондовый рынок", "class" => "figurette lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("why.png"), "alt" => "Зачем инвестировать?", "class" => "figurette lazy"
 		.span6
 			h3 Просто тратить меньше?
 			p.lead Просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения финансовых целей.
@@ -157,21 +157,23 @@ header.navbar.navbar-fixed-top
 			p &nbsp;
 			p Идея создания этого сервиса пришла нам не просто так. Мы сами прошли путь начинающего инвестора пробуя и  ошибаясь, тратя время и деньги. Мы посещали учебные курсы и вебинары, общались с инвестиционными консультантами, читали книги об инвестициях, потому что не нашли такого сервиса, где можно было бы получить всю информацию для того чтобы уверенно принимать решения об инвестициях в одном месте и в удобной форме.
 			p Поэтому мы создали этот учебный курс в котором соединили лучшие практики обучения инвестициям и  современные технологии онлайн обучения. Наша главная цель — сделать процесс обучения быстрым, простым и  удобным, чтобы минимум действий приносил максимум результатов.
-			a.scroll.btn.btn-centered href="#download"
+			a.scroll.btn.btn-centered href="#contact"
 				i.icon-plus
-				|&nbsp;Начать!
+				|&nbsp;Получить приглашение!
 	
 
 /! Newsletter
 #contact.newsletter.color-1
 	.inner-page.row-fluid
-		.span4
-			h4
+		.span12
+			h2.page-headline
 				| Подпишись и оставайся в курсе новостей
-		.span6
-			input.subscribe name="EMAIL" placeholder="ваш@e-mail.com" type="email"
-		.span2
-			button.btn.pull-right.subscribe type="submit" Подписаться
+	.inner-page.row-fluid
+		= form_for Invitation.new, url: {controller: "invitations", action: "create"} do |f|
+			.span6
+				= f.email_field :email, :class => "subscribe", :placeholder => "ваш@e-mail.com"
+			.span6
+				= f.submit 'Получить приглашение!', :class => "subscribe btn btn-centered"
 /! The footer, social media icons, and copyright
 footer.page.color-5
 	.inner-page.row-fluid
