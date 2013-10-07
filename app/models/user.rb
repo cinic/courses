@@ -3,7 +3,7 @@ class User
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-  devise :invitable, :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
@@ -45,15 +45,6 @@ class User
 
   ## Socials accounts names
   field :twitter_name, :type => String
-
-  field :invitation_token, type: String
-  field :invitation_created_at, type: Time
-  field :invitation_sent_at, type: Time
-  field :invitation_accepted_at, type: Time
-  field :invitation_limit, type: Integer
-
-  index( {invitation_token: 1}, {:background => true} )
-  index( {invitation_by_id: 1}, {:background => true} )
 
   ROLES = %w[manager admin learner]
   #def role?(base_role)

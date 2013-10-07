@@ -17,8 +17,8 @@ header.navbar.navbar-fixed-top
 				li
 					a.scroll.fadeto.brand-4 title="Who we are" href="#about" О нас
 				li
-					a.scroll.brand-2 title="Get in touch!" href="#contact" Получить приглашение!
-				/= render "shared/navigation"
+					a.scroll.brand-2 title="Get in touch!" href="#contact" Контакты
+				= render "shared/navigation"
 /! Home Page
 .page.color-1 id="home"
 	.inner-page
@@ -84,9 +84,9 @@ header.navbar.navbar-fixed-top
 			h3 Это действительно очень удобно!
 			p Деньги не любят суеты. Наоборот, чтобы стать успешным инвестором требуется внимательность и дисциплина.Вы сами управляете расписанием и темпом обучения, а интеллектуальная система поддержки напомнит вам о следующем уроке и достигнутом прогрессе в прохождении курса.
 			p
-				a.scroll.btn.pull-left href="#contact" title="Получить приглашение!"
+				a.scroll.btn.pull-left href="/courses" title="Начать обучение!"
 					i.icon-caret-down 
-					|&nbsp;Получить приглашение!
+					|&nbsp;Начать!
 			/p.lead Present your project properly. Create your own art from included templates
 			/ul.list-wide
 				/li
@@ -107,7 +107,7 @@ header.navbar.navbar-fixed-top
 	.row-fluid.inner-page
 		.span6.pull-right
 			.btn-container.figurette
-				= image_tag "how.png", "alt" => "Как это работает?"
+				= image_tag "how.png", "alt" => "Play video"
 				/a.lightbox.iframe.btn-play href="http://vimeo.com/61693087" target="_blank"
 					i.icon-play
 		.span6.pull-right
@@ -125,9 +125,9 @@ header.navbar.navbar-fixed-top
 					i.icon-cogs
 					| Секреты лучших инвесторов
 			br/
-			a.scroll.btn.btn-centered href="#contact"
+			a.scroll.btn.btn-centered href="/courses"
 				i.icon-plus
-				|&nbsp;Получить приглашение!
+				|&nbsp;Начать!
 /! /Features
 
 /! Assets page
@@ -137,7 +137,7 @@ header.navbar.navbar-fixed-top
 	/! Vectors
 	.row-fluid.inner-page
 		.span6.lazy-container
-			= image_tag "pixel.png", "data-original" => asset_path("why.png"), "alt" => "Зачем учиться инвестировать?", "class" => "figurette lazy"
+			= image_tag "pixel.png", "data-original" => asset_path("why.png"), "alt" => "Фондовый рынок", "class" => "figurette lazy"
 		.span6
 			h3 Просто тратить меньше?
 			p.lead Просто тратить меньше заработанного обычно недостаточно для формирования капитала и достижения финансовых целей.
@@ -157,22 +157,21 @@ header.navbar.navbar-fixed-top
 			p &nbsp;
 			p Идея создания этого сервиса пришла нам не просто так. Мы сами прошли путь начинающего инвестора пробуя и  ошибаясь, тратя время и деньги. Мы посещали учебные курсы и вебинары, общались с инвестиционными консультантами, читали книги об инвестициях, потому что не нашли такого сервиса, где можно было бы получить всю информацию для того чтобы уверенно принимать решения об инвестициях в одном месте и в удобной форме.
 			p Поэтому мы создали этот учебный курс в котором соединили лучшие практики обучения инвестициям и  современные технологии онлайн обучения. Наша главная цель — сделать процесс обучения быстрым, простым и  удобным, чтобы минимум действий приносил максимум результатов.
-			a.scroll.btn.btn-centered href="#сontact"
+			a.scroll.btn.btn-centered href="#download"
 				i.icon-plus
-				|&nbsp;Получить приглашение!
+				|&nbsp;Начать!
 	
 
 /! Newsletter
 #contact.newsletter.color-1
 	.inner-page.row-fluid
-		.span12
-			h2.page-headline
-				| Оставьте емайл и получите приглашение первым!
-	.inner-page.row-fluid
+		.span4
+			h4
+				| Подпишись и оставайся в курсе новостей
 		.span6
 			input.subscribe name="EMAIL" placeholder="ваш@e-mail.com" type="email"
-		.span6
-			button.btn.btn-centered.subscribe type="submit" Получить приглашение!
+		.span2
+			button.btn.pull-right.subscribe type="submit" Подписаться
 /! The footer, social media icons, and copyright
 footer.page.color-5
 	.inner-page.row-fluid
@@ -186,10 +185,9 @@ footer.page.color-5
 			a href="#contact"
 				i.icon-google-plus-sign
 		.span6.text-right.copyright
-			|&copy; 2013
+			| &copy; 2013
+			a href="http://prettystrap.com" title="twitter bootstrap themes"
 			|&nbsp;Все права защищены
-			|&nbsp;
 			a.scroll href="#top" title="Наверх"
-				|&nbsp;На верх
-				|&nbsp;
+				|&nbsp; На верх
 				i.icon-caret-up
