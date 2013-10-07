@@ -10570,6 +10570,8 @@ footer {
   font-size: 24px;
   margin: 0;
 }
+.newsletter .row-fluid:first-child { padding-top: 140px; }
+.newsletter .row-fluid:last-child { padding-bottom: 250px; }
 .subscribe {
   width: 100%;
 }
