@@ -16,13 +16,19 @@ Courses::Application.configure do
   # Don't care if the mailer can't send
   #config.action_mailer.raise_delivery_errors = false
   # ActionMailer Config
-  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # A dummy setup for development - no deliveries, but logged
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :smtp
   # Defaults to:
-  config.action_mailer.sendmail_settings = {
-    location: '/usr/sbin/sendmail',
-    arguments: '-i'
+  #config.action_mailer.sendmail_settings = {
+  #  location: '/usr/sbin/sendmail',
+  #  arguments: '-i'
+  #}
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mandrillapp.com",
+    port: 587,
+    user_name: "it@polza.co",
+    password: "IcR09i21dGpoo4L8qHkKOw"
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
@@ -33,9 +39,6 @@ Courses::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-
-  # Devise config
-  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Do not compress assets
   config.assets.compress = false
