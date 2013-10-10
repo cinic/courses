@@ -24,13 +24,13 @@ Courses::Application.configure do
   #  location: '/usr/sbin/sendmail',
   #  arguments: '-i'
   #}
-  config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    port: 587,
-    user_name: "it@polza.co",
-    password: "IcR09i21dGpoo4L8qHkKOw"
-  }
-  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.smtp_settings = {
+  #  address: "smtp.mandrillapp.com",
+  #  port: 587,
+  #  user_name: "it@polza.co",
+  #  password: "IcR09i21dGpoo4L8qHkKOw"
+  #}
+  config.action_mailer.perform_deliveries = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 
