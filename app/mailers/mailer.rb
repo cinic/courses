@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-	default from: 'notifications@example.com'
+	default from: 'no-replay@polza.co'
   def invitation(mail, subject)
     mail(to: mail, subject: subject)
   end
