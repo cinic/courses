@@ -208,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson
   bson_ext
   cancan
   capybara (>= 1.1.2)
