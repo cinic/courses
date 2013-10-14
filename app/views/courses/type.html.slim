@@ -1,5 +1,5 @@
-- content_for :title, @course_type.description
-h1 = @course_type.description
+- content_for :title, @course_type.title
+h1 = @course_type.title
 
 dl.tabs.group.clearfix
 	- @crs.each do |key, items|
@@ -7,16 +7,10 @@ dl.tabs.group.clearfix
 		dd.courses-list.tabs__content
 			- items.each do |type|
 				.courses-list__item
-					h2.courses-list-item__title
-						= type.level + type.position unless type.level == nil && type.position == nil
-						| : &nbsp;
-						= type.title
-					p.courses-list-item__description = type.description
-					p.courses-list-item__link = link_to "Начать", course_type_url([@course_type.name, type.slugs.last])
-
-
-/td = link_to 'Show', course
-/td = link_to 'Edit', edit_course_path(course)
-/td = link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete
+					a.courses-list-item__link href="#{course_type_url([@course_type.name, type.slugs.last])}"
+						h2.courses-list-item__title
+							= type.level + type.position unless type.level == nil && type.position == nil
+							| : &nbsp;
+							= type.title
 
 p = link_to 'К списку программ обучения', courses_path

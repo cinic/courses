@@ -26,4 +26,7 @@ gem 'launchy', '>= 2.1.2', :group => :test
 gem 'factory_girl_rails', '>= 4.0.0', :group => [:development, :test]
 gem 'thin', :group => [:development, :test]
 gem 'google-analytics-rails', :group => :production
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 #gem "capistrano", :group => :development
