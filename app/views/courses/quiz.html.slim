@@ -12,18 +12,14 @@ article.course.group
 				span class="course-navigation__item active" Контрольный опрос
 
 	section.course__content
-		= @course.questions
-/					a.chapters-navigation__item data-chapter_id="#{chapter.id}"
-/						h4.course-chapter__title = chapter.title
-/			div.course-chapter__content
-/				= chapter.content.html_safe
-/			ul
-/				- for question in chapter.questions
-/					li
-/						= question.content
-/						ul
-/							- for answer in question.answers
-/								li = answer.content
-/p #{link_to "Edit", edit_course_path(@course)} | #{link_to "Destroy", @course, :confirm => 'Are you sure?', :method => :delete} | #{link_to "View All", courses_path}
+		h4 = @quiz_content.content.html_safe
+		= form_tag(request.fullpath, method: "post", class: "quiz--form") do
+			ul
+				- @quiz_content.answers.each_with_index do |answer, index|
+					li
+						= radio_button_tag(:answer, index)
+						= label_tag "answer_#{index}", answer.content
+			= submit_tag("Проверить")
+		= flash[:notice]
+				
 p = link_to "К списку курсов", course_type_url(@course_type.name)
-/= request.fullpath

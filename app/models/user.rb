@@ -47,6 +47,7 @@ class User
   field :twitter_name, :type => String
   field :provider, :type => String
   field :url, :type => String
+  field :progress, :type => Hash
 
   ROLES = %w[manager admin learner]
   #def role?(base_role)

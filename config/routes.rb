@@ -14,7 +14,8 @@ Courses::Application.routes.draw do
 
   match 'courses' => 'courses#index', :as => :courses
   match 'courses/:slug' => 'courses#type', :as => :course_type
-  match 'courses/:slug/:id/quiz' => 'courses#quiz', :as => :course
+  match 'courses/:slug/:id/quiz(/:index)' => 'courses#quiz', :as => :course
+  
   match 'courses/:slug/:id(/:index)' => 'courses#show', :as => :course
   #match 'courses/:id/edit' => 'courses#edit'
   
