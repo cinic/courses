@@ -20,8 +20,19 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @course_type = CourseType.find(@course.course_type_id)
 
-    
     @chapter_content = params[:index] ? @course.chapters[params[:index].to_i] : @course.chapters[0]
+    
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @course }
+    end
+  end
+
+  def quiz
+
+    @course = Course.find(params[:id])
+    @course_type = CourseType.find(@course.course_type_id)
     
 
     respond_to do |format|

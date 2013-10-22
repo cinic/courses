@@ -96,7 +96,8 @@
 			padding: 9px 0 9px 12px;
 			color: #333;
 			text-decoration: none;
-			&:hover {
+			&:hover,
+			&.active {
 				background: #f5f5f5;
 			}
 			&:active {
