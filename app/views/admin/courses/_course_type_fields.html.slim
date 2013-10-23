@@ -1,4 +1,4 @@
 p
 	= f.label :id, "Тип курса"
-	= collection_select(:course, :course_type_id, CourseType.all, :id, :description, :prompt => 'Выбрать')
+	= collection_select(:course, :course_type_id, CourseType.all, :id, :title, :prompt => 'Выбрать')
 	br/

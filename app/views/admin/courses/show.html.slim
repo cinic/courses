@@ -13,7 +13,7 @@ ol
 			h2 = chapter.title
 			= chapter.content.html_safe
 			ul
-				- for question in chapter.questions
+				- for question in @course.questions
 					li
 						= question.content
 						ul

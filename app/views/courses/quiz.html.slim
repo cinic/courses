@@ -1,0 +1,25 @@
+- content_for :title, @course.title
+
+h1.course-title = @course.title
+article.course.group
+	.course__navigation.group
+		/h3.course__navigation-title Оглавление
+		ul.course-navigation__layout
+			- @course.chapters.each_with_index do |chapter, index|
+				li.course-navigation__layout-item
+					= link_to chapter.title, course_type_url([@course_type.name, @course.slugs.last, index.to_s]), {"data-chapter_id" => "#{chapter.id}", "class" => "course-navigation__item"}
+			li.course-navigation__layout-item
+				span class="course-navigation__item active" Контрольный опрос
+
+	section.course__content
+		h4 = @quiz_content.content.html_safe
+		= form_tag(request.fullpath, method: "post", class: "quiz--form") do
+			ul
+				- @quiz_content.answers.each_with_index do |answer, index|
+					li
+						= radio_button_tag(:answer, index)
+						= label_tag "answer_#{index}", answer.content
+			= submit_tag("Проверить")
+		= flash[:notice]
+				
+p = link_to "К списку курсов", course_type_url(@course_type.name)

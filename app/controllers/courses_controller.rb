@@ -1,3 +1,4 @@
+# coding: utf-8
 class CoursesController < ApplicationController
   before_filter :authenticate_user!
   layout "courses"
@@ -20,7 +21,6 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @course_type = CourseType.find(@course.course_type_id)
 
-    
     @chapter_content = params[:index] ? @course.chapters[params[:index].to_i] : @course.chapters[0]
     
 
@@ -29,6 +29,38 @@ class CoursesController < ApplicationController
       format.json { render json: @course }
     end
   end
+
+  def quiz
+
+    @course = Course.find(params[:id])
+    @course_type = CourseType.find(@course.course_type_id)
+    @quiz_content = params[:index] ? @course.questions[params[:index].to_i] : @course.questions[0]
+    if params[:answer]
+      @user = User.find(current_user.id)
+      
+      if @quiz_content.answers[params[:answer].to_i].right != true
+        notice = "Ответ не верный #{@quiz_content.id} #{@user.progress}"
+      else
+
+          if @user.progress.nil?
+            @user.progress = { "#{@course.id}" => { "#{@quiz_content.id}" => 1 } }
+          else
+            progress = @user.progress["#{@course.id}"]["#{@quiz_content.id}"] ||= 0
+            @user.progress["#{@course.id}"]["#{@quiz_content.id}"] = progress + 1
+          end
+          @user.save
+          
+          notice = "Ответ верный #{@user.progress}"
+      end
+      redirect_to(request.url, notice: notice) and return
+    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @course }
+    end
+  end
+
   # GET /courses/:slug/1
   # GET /courses/:slug/1.json
   def type

@@ -12,6 +12,7 @@ gem 'slim-rails', '~> 1.1.0'
 gem 'slim_assets', '~> 0.0.2'
 gem 'jquery-rails'
 gem 'modernizr-rails'
+gem 'bson'
 gem 'bson_ext'
 gem 'devise', '>= 2.1.2'
 gem 'cancan'
@@ -25,4 +26,7 @@ gem 'launchy', '>= 2.1.2', :group => :test
 gem 'factory_girl_rails', '>= 4.0.0', :group => [:development, :test]
 gem 'thin', :group => [:development, :test]
 gem 'google-analytics-rails', :group => :production
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 #gem "capistrano", :group => :development

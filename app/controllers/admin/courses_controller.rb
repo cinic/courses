@@ -28,11 +28,11 @@ class Admin::CoursesController < Admin::BaseController
 
 	    1.times do
 	      chapter = @course.chapters.build
-	      1.times do
-	        question = chapter.questions.build
-	        2.times { question.answers.build }
-	      end
 	    end
+      1.times do
+        question = @course.questions.build
+        2.times { question.answers.build }
+      end
 
 	    respond_to do |format|
 	      format.html # new.html.erb

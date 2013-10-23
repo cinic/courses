@@ -8,6 +8,9 @@ article.course.group
 			- @course.chapters.each_with_index do |chapter, index|
 				li.course-navigation__layout-item
 					= link_to chapter.title, course_type_url([@course_type.name, @course.slugs.last, index.to_s]), {"data-chapter_id" => "#{chapter.id}", "class" => "course-navigation__item"}
+			li.course-navigation__layout-item
+				= link_to "Контрольный опрос", course_type_url([@course_type.name, @course.slugs.last, "quiz"]), {"class" => "course-navigation__item"}
+
 	section.course__content
 		= @chapter_content.content.html_safe
 /					a.chapters-navigation__item data-chapter_id="#{chapter.id}"

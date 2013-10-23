@@ -1,5 +1,9 @@
 Courses::Application.routes.draw do
 
+  get "omniauth_callbacks/facebook"
+
+  get "omniauth_callbacks/vkontakte"
+
   namespace :admin do
        # Directs /admin/products/* to Admin::ProductsController
        # (app/controllers/admin/products_controller.rb)
@@ -10,11 +14,13 @@ Courses::Application.routes.draw do
 
   match 'courses' => 'courses#index', :as => :courses
   match 'courses/:slug' => 'courses#type', :as => :course_type
+  match 'courses/:slug/:id/quiz(/:index)' => 'courses#quiz', :as => :course
+  
   match 'courses/:slug/:id(/:index)' => 'courses#show', :as => :course
   #match 'courses/:id/edit' => 'courses#edit'
   
 
-  devise_for :users, :path => 'account'
+  devise_for :users, :path => 'account', :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   match 'account' => 'users#index'
   resources :invitations
   #resources :course_types

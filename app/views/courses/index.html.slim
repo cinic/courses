@@ -5,9 +5,9 @@ h1 Программы обучения
 ul
   - @course_types.each do |type|
     li
-    	= link_to type.description, course_type_url(type.name)
-    	p
-    		| Получи общие сведения об инвестициях, изучив как работают акции и что значит быть акционером.
+    	= link_to type.title, course_type_url(type.name)
+    	p = type.description
+
     /td = link_to 'Show', course
     /td = link_to 'Edit', edit_course_path(course)
     /td = link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete
