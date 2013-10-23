@@ -37,14 +37,22 @@ class CoursesController < ApplicationController
     @quiz_content = params[:index] ? @course.questions[params[:index].to_i] : @course.questions[0]
     if params[:answer]
       @user = User.find(current_user.id)
+      
       if @quiz_content.answers[params[:answer].to_i].right != true
-        flash[:notice] = "Ответ не верный #{@quiz_content.id}"
+        notice = "Ответ не верный #{@quiz_content.id} #{@user.progress}"
       else
-          progress = @user.progress["#{@course.id}"]["#{@quiz_content.id}"] || 0
-          @user.progress["#{@course.id}"]["#{@quiz_content.id}"] = progress + 1
+
+          if @user.progress.nil?
+            @user.progress = { "#{@course.id}" => { "#{@quiz_content.id}" => 1 } }
+          else
+            progress = @user.progress["#{@course.id}"]["#{@quiz_content.id}"] ||= 0
+            @user.progress["#{@course.id}"]["#{@quiz_content.id}"] = progress + 1
+          end
           @user.save
-          flash[:notice] = "Ответ верный #{@user.progress}"
+          
+          notice = "Ответ верный #{@user.progress}"
       end
+      redirect_to(request.url, notice: notice) and return
     end
 
     respond_to do |format|
