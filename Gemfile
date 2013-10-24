@@ -29,4 +29,5 @@ gem 'google-analytics-rails', :group => :production
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+gem 'newrelic_rpm'
 #gem "capistrano", :group => :development
