@@ -1,8 +1,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery_nested_form
+//= require bootstrap.min
 //= require account/jquery.uniform.min
 //= require account/twitter-bootstrap-hover-dropdown.min
+
 
 $(function() {
 	// Табы

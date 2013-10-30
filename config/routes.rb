@@ -20,7 +20,7 @@ Courses::Application.routes.draw do
   #match 'courses/:id/edit' => 'courses#edit'
   
 
-  devise_for :users, :path => 'account', :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :path => 'account', :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => :registrations }
   match 'account' => 'users#index'
   resources :invitations
   #resources :course_types

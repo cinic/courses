@@ -67,6 +67,14 @@ module Courses
         g.helper_specs false
     end
 
+    config.to_prepare do
+      Devise::SessionsController.layout proc{ |controller| action_name == 'new' ? "devise"   : "courses" }
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "courses" : "devise" }
+      #Devise::ConfirmationsController.layout "devise"
+      #Devise::UnlocksController.layout "devise"            
+      #Devise::PasswordsController.layout "devise"        
+    end
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     Mongoid.logger.level = Logger::DEBUG
