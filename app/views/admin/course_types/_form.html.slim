@@ -1,4 +1,4 @@
-= form_for @course_type do |f|
+= form_for [:admin,@course_type] do |f|
   - if @course_type.errors.any?
     #error_explanation
       h2 = "#{pluralize(@course_type.errors.count, "error")} prohibited this course_type from being saved:"
@@ -9,6 +9,9 @@
   .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :title
+    = f.text_field :title
   .field
     = f.label :description
     = f.text_field :description

@@ -19,4 +19,18 @@ class Course
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   #accepts_nested_attributes_for :course_type
   
+
+  def set_defaults(user, course)
+    user.progress = { 
+      course.course_type_id => { 
+        course.id => { }
+      }
+    }
+    user.save
+  end
+
+  def check_answers(user, answer)
+
+  end
+
 end

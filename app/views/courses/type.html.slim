@@ -1,16 +1,35 @@
 - content_for :title, @course_type.title
-h1 = @course_type.title
+h1.page-title = @course_type.title
 
-dl.tabs.group.clearfix
-	- @crs.each do |key, items|
-		dt.tabs__title Уровень #{key}
-		dd.courses-list.tabs__content
-			- items.each do |type|
-				.courses-list__item
-					a.courses-list-item__link href="#{course_type_url([@course_type.name, type.slugs.last])}"
-						h2.courses-list-item__title
-							= type.level + type.position unless type.level == nil && type.position == nil
-							| : &nbsp;
-							= type.title
+.col-md-8
+	.tabbable-custom
+		ul.nav.nav-tabs
+			- @crs.each_with_index do |item, index|
+				- if index == 0
+					li.active
+						a href="#level_#{item[0]}" data-toggle="tab" Уровень #{item[0]}
+				- else
+					li
+						a href="#level_#{item[0]}" data-toggle="tab" Уровень #{item[0]}
+		.tab-content
+			- @crs.each_with_index do |item, index|
+				- if index == 0
+					.tab-pane.active id="level_#{item[0]}"
+						- item[1].each do |type|
+							.courses-list__item
+								a.courses-list-item__link href="#{course_type_url([@course_type.name, type.slugs.last])}"
+									h4.courses-list-item__title
+										= "#{type.level}".to_i + "#{type.position}".to_i
+										| : &nbsp;
+										= type.title
+				- else
+					.tab-pane id="level_#{item[0]}"
+						- item[1].each do |type|
+							.courses-list__item
+								a.courses-list-item__link href="#{course_type_url([@course_type.name, type.slugs.last])}"
+									h4.courses-list-item__title
+										= "#{type.level}".to_i + "#{type.position}".to_i
+										| : &nbsp;
+										= type.title
 
-p = link_to 'К списку программ обучения', courses_path
+	p = link_to 'К списку программ обучения', courses_path

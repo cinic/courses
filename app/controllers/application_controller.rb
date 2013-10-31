@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def layout
     if devise_controller? && devise_mapping.name == :user
-      "account"
+      "courses"
     else
       "application"
     end
