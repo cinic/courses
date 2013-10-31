@@ -1,4 +1,4 @@
-class CourseTypesController < ApplicationController
+class Admin::CourseTypesController < Admin::BaseController
   # GET /course_types
   # GET /course_types.json
   def index
@@ -44,7 +44,7 @@ class CourseTypesController < ApplicationController
 
     respond_to do |format|
       if @course_type.save
-        format.html { redirect_to @course_type, notice: 'Course type was successfully created.' }
+        format.html { redirect_to [:admin,@course_type], notice: 'Course type was successfully created.' }
         format.json { render json: @course_type, status: :created, location: @course_type }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class CourseTypesController < ApplicationController
 
     respond_to do |format|
       if @course_type.update_attributes(params[:course_type])
-        format.html { redirect_to @course_type, notice: 'Course type was successfully updated.' }
+        format.html { redirect_to [:admin,@course_type], notice: 'Course type was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +76,7 @@ class CourseTypesController < ApplicationController
     @course_type.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_types_url }
+      format.html { redirect_to admin_course_types_url }
       format.json { head :no_content }
     end
   end

@@ -14,12 +14,11 @@ article.course.group
 	section.course__content
 		h4 = @quiz_content.content.html_safe
 		= form_tag(request.fullpath, method: "post", class: "quiz--form") do
-			ul
-				- @quiz_content.answers.each_with_index do |answer, index|
-					li
-						= radio_button_tag(:answer, index)
-						= label_tag "answer_#{index}", answer.content
-			= submit_tag("Проверить")
+			- @quiz_content.answers.each_with_index do |answer, index|
+				div
+					= radio_button_tag(:answer, index)
+					= label_tag "answer_#{index}", answer.content
+			= submit_tag("Проверить", {class: "btn green"})
 		= flash[:notice]
 				
 p = link_to "К списку курсов", course_type_url(@course_type.name)

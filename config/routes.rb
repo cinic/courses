@@ -9,6 +9,7 @@ Courses::Application.routes.draw do
        # (app/controllers/admin/products_controller.rb)
     resources :users
     resources :courses
+    resources :course_types
     root :to => 'base#index'
   end
 
@@ -23,7 +24,6 @@ Courses::Application.routes.draw do
   devise_for :users, :path => 'account', :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => :registrations }
   match 'account' => 'users#index'
   resources :invitations
-  #resources :course_types
   #resources :articles
   #resources :practice
   
