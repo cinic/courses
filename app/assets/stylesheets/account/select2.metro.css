@@ -21,7 +21,11 @@ Version: 3.4.1 Timestamp: Thu Jun 27 18:02:10 PDT 2013
 
     More Info : http://www.quirksmode.org/css/box.html
   */
-    @include box-sizing(border-box); /* css3 */
+  -webkit-box-sizing: border-box; /* webkit */
+   -khtml-box-sizing: border-box; /* konqueror */
+     -moz-box-sizing: border-box; /* firefox */
+      -ms-box-sizing: border-box; /* ie */
+          box-sizing: border-box; /* css3 */
 }
 
 .select2-container .select2-choice {
