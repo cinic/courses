@@ -1,12 +1,20 @@
 require File.expand_path('../boot', __FILE__)
 
+<<<<<<< HEAD
 # Pick the frameworks you want:
 # require "active_record/railtie"
+=======
+#require 'rails/all'
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
+<<<<<<< HEAD
 
+=======
+require "rails/test_unit/railtie"
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -15,7 +23,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+<<<<<<< HEAD
 module Courses
+=======
+module Travis
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -43,7 +55,11 @@ module Courses
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
+<<<<<<< HEAD
     config.filter_parameters += [:password, :password_confirmation]
+=======
+    config.filter_parameters += [:password]
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -57,16 +73,33 @@ module Courses
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
+<<<<<<< HEAD
     # config.active_record.whitelist_attributes = true
+=======
+    #config.active_record.whitelist_attributes = true
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
     # Enable the asset pipeline
     config.assets.enabled = true
 
+<<<<<<< HEAD
+=======
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '2.0'
+    # trailing slash
+    config.action_controller.default_url_options = { :trailing_slash => false }
+
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{^/(.*)/$}, '/$1'
+    end
+
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
     config.generators do |g|
         g.view_specs false
         g.helper_specs false
     end
 
+<<<<<<< HEAD
     config.to_prepare do
       Devise::SessionsController.layout proc{ |controller| action_name == 'new' ? "devise"   : "courses" }
       Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "courses" : "devise" }
@@ -77,6 +110,8 @@ module Courses
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+=======
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
     Mongoid.logger.level = Logger::DEBUG
     Moped.logger.level = Logger::DEBUG
   end

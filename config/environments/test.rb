@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Courses::Application.configure do
+=======
+Travis::Application.configure do
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's
@@ -29,6 +33,11 @@ Courses::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+<<<<<<< HEAD
+=======
+  # Raise exception on mass assignment protection for Active Record models
+  config.active_record.mass_assignment_sanitizer = :strict
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr

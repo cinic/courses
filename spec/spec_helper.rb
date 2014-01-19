@@ -6,7 +6,11 @@ require 'rspec/autorun'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
+<<<<<<< HEAD
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+=======
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
 RSpec.configure do |config|
   # ## Mock Framework
@@ -18,12 +22,20 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+<<<<<<< HEAD
   #config.fixture_path = "#{::Rails.root}/spec/fixtures"
+=======
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
+<<<<<<< HEAD
   #config.use_transactional_fixtures = true
+=======
+  config.use_transactional_fixtures = true
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -35,6 +47,7 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+<<<<<<< HEAD
 
   # Clean up the database
   require 'database_cleaner'
@@ -47,4 +60,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
   config.include Mongoid::Matchers
+=======
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 end

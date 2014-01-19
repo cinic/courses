@@ -7,8 +7,15 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
+<<<<<<< HEAD
  * require_tree .
  *= require_self
  *= require scaffolds
  *= require style
+=======
+ *
+ *= require_self
+ *= require chosen
+ *= require_tree .
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
  */

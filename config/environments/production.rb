@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Courses::Application.configure do
+=======
+Travis::Application.configure do
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -19,6 +23,11 @@ Courses::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -47,8 +56,11 @@ Courses::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
+<<<<<<< HEAD
   config.assets.initialize_on_precompile = false
   config.assets.precompile += ['account.js', 'account.css']
+=======
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
@@ -63,6 +75,7 @@ Courses::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+<<<<<<< HEAD
   config.action_mailer.default_url_options = { :host => 'polza.co' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
@@ -80,4 +93,9 @@ Courses::Application.configure do
   GA.tracker = "UA-44488895-1"
   GA.script_source = "('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js'"
 
+=======
+  # Log the query plan for queries taking more than this (works
+  # with SQLite, MySQL, and PostgreSQL)
+  # config.active_record.auto_explain_threshold_in_seconds = 0.5
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 end

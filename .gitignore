@@ -18,3 +18,14 @@
 /public/google*
 /public/yandex*
 /public/assets
+=======
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+test
+*.swp
+.DS_Store

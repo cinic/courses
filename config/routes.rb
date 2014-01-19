@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Courses::Application.routes.draw do
 
   get "omniauth_callbacks/facebook"
@@ -27,6 +28,14 @@ Courses::Application.routes.draw do
   #resources :articles
   #resources :practice
   
+=======
+Travis::Application.routes.draw do
+
+  resources :ratings
+  resources :rates
+
+  get "pages/index"
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -77,7 +86,12 @@ Courses::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   root :to => 'home#index'
+=======
+  # root :to => 'welcome#index'
+  root :to => 'rates#index'
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 
   # See how all your routes lay out with "rake routes"
 

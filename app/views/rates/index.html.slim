@@ -1,0 +1,17 @@
+.ratings.col--8.group
+	.box.box--float-left.box--margin-left.col--6-margin
+		h2.box__header Ведущие операторы
+		.box__content
+			ul.ratings-list
+				- @volumes.each do |item|
+					li.ratings-list__item
+						- item.name.gsub(/\r\n/, ': ') if item.name != nil
+						= link_to item.name, rate_path(item)
+	.box.box--float-left.box--margin-left.col--6-margin
+		h2.box__header Лидеры рынка
+		.box__content
+			ul.ratings-list
+				- @places.each do |item|
+					li.ratings-list__item
+						- item.name.gsub(/\r\n/, ': ') if item.name != nil
+						= link_to item.name, rate_path(item)

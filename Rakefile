@@ -4,4 +4,8 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+<<<<<<< HEAD
 Courses::Application.load_tasks
+=======
+Travis::Application.load_tasks
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde

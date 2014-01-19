@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Courses::Application.configure do
+=======
+Travis::Application.configure do
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -19,6 +23,7 @@ Courses::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # A dummy setup for development - no deliveries, but logged
   config.action_mailer.delivery_method = :smtp
+<<<<<<< HEAD
   # Defaults to:
   #config.action_mailer.sendmail_settings = {
   #  location: '/usr/sbin/sendmail',
@@ -30,6 +35,8 @@ Courses::Application.configure do
   #  user_name: "it@polza.co",
   #  password: "IcR09i21dGpoo4L8qHkKOw"
   #}
+=======
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   config.action_mailer.perform_deliveries = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
@@ -40,9 +47,25 @@ Courses::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 
+<<<<<<< HEAD
+=======
+  # Raise exception on mass assignment protection for Active Record models
+  #config.active_record.mass_assignment_sanitizer = :strict
+
+  # Log the query plan for queries taking more than this (works
+  # with SQLite, MySQL, and PostgreSQL)
+  #config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
   # Do not compress assets
   config.assets.compress = false
 
   # Expands the lines which load the assets
   config.assets.debug = true
+<<<<<<< HEAD
+=======
+
+  # Devise config
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 end

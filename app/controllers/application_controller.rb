@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+<<<<<<< HEAD
   layout :layout
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -15,4 +16,6 @@ class ApplicationController < ActionController::Base
       "application"
     end
   end
+=======
+>>>>>>> ab83d1ef940b0a3b251a9f3ad1c3b88f523bcdde
 end
